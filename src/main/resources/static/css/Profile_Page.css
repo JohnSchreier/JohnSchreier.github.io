@@ -1,0 +1,89 @@
+body {
+    background-image: url(../images/SBABackground-2.png);
+    background-repeat: no-repeat;
+    background-size: 1920px;
+    --color-primary: #1778f2;
+    --color-secondary: #fc4c02;
+    --color-secondary-dark: #ad3603;
+    --color-error: #e20c0c;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+  
+    /* Orange reference: Hex: #FC4C02 RGB: (252, 76, 2) */
+    /* Blue reference: Hex: #1778F2 RGB: (23, 120, 242) */
+    /* White is just solid white */
+  
+    font-family: "Koulen", cursive;
+    /* font-size: 18px; */
+    color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: inherit;
+    grid-column-gap: 10px;
+  
+  }
+  .welcome-message{
+    color: white;
+    grid-column: 2;
+    grid-row:1;
+    justify-self: center;
+    margin-top: 3%;
+  }
+  .welcome-message-font{
+    font-size: 270%;
+  }
+  .home-button{
+    grid-column: 1;
+    grid-row: 1;
+    font-family: "Koulen", cursive;
+    margin: 4%;
+  }
+  .blue-track-lanes-container{
+    grid-column: 2;
+    justify-self: center;
+  }
+  #blue-track-lanes-img {
+    width: 75vmax;
+    border: 4px solid white;
+    border-radius: 25px;
+    position: relative;
+    z-index: 1;
+  }
+  .h3-headers {
+    font-size: 230%;
+  }
+  .h4-headers {
+    font-size: 180%;
+  }
+  .PR-edictions-container{
+    position: relative;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 2;
+    color: white;
+    border: 4px solid white;
+    border-radius: 25% 10%;
+    background-color: var(--color-secondary);
+    height: 80%;
+    width: 90%;
+    margin-top: 4%;
+    margin-left: 45%;
+    z-index: 2;
+  }
+  .your-coach-your-goals-container{
+    position: relative;
+    text-align: center;
+    grid-column: 3;
+    grid-row: 2;
+    color: white;
+    border: 4px solid white;
+    border-radius: 25% 10%;
+    background-color: var(--color-secondary);
+    height: 80%;
+    width: 90%;
+    margin-top: 4%;
+    margin-left: -35%;
+    z-index: 3;
+  }
+
