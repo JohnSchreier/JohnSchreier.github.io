@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
@@ -35,16 +36,16 @@
     </div>
             <!-- REGISTER ACCOUNT FORM -->
     <div class="container2">
-        <form  th:object="${userForm}" th:action="@{/register}" th:method="post" id="createAccount">
+        <form id="createAccount" th:action="@{/register}" th:object="${user}" method="post" >
             <h1 class="form__title">Create Account</h1>
             <div class="form__message form__message--error"></div>
 
             <div class="form__input-group">
                 <input
                         type="text"
+                        autofocus
                         class="form__input"
                         th:field="*{firstName}"
-                        autofocus
                         placeholder="First Name"
                 />
                 <div class="form__input--error-message"></div>
@@ -73,11 +74,12 @@
                         class="form__input"
                         th:field="*{password}"
                         placeholder="Password"
+                        name = "password"
                 />
                 <div class="form__input--error-message"></div>
             </div>
 
-            <button class="form__button" type="submit">Continue</button>
+            <button name="register" class="form__button" type="Submit" th:text="register"></button>
 
             <p class="form__text">
                 <a class="form__link" href="/" id="linkLogin"

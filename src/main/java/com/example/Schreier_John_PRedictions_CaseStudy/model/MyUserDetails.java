@@ -8,32 +8,18 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Collection;
 
-public class MyUserDetails implements UserDetails {
+public class MyUserDetails implements UserDetails{
 
-    private String email;
-    private String password;
-    private String firstName;
-    private String lastName;
+    private User user;
+
     public MyUserDetails(User user) {
-        this.email=user.getEmail();
-        this.password=user.getPassword();
-        this.firstName=user.getFirstName();
-        this.lastName=user.getLastName();
+        this.user = user;
     }
 
-    public MyUserDetails() {
 
-    }
-
-    public String getFirstName(){
-        return firstName;
-    }
-    public String getLastName(){
-        return lastName;
-    }
     @Override
     public String getPassword() {
-        return password;
+        return user.getPassword();
     }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -42,26 +28,30 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return null;
+        return user.getEmail();
     }
 
     @Override
-    public boolean isAccountNonExpired() {
-        return false;
+    public boolean isAccountNonExpired()
+    {
+        return true;
     }
 
     @Override
-    public boolean isAccountNonLocked() {
-        return false;
+    public boolean isAccountNonLocked()
+    {
+        return true;
     }
 
     @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
+    public boolean isCredentialsNonExpired()
+    {
+        return true;
     }
 
     @Override
-    public boolean isEnabled() {
-        return false;
+    public boolean isEnabled()
+    {
+        return true;
     }
 }

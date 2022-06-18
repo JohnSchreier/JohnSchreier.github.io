@@ -43,7 +43,7 @@
       </div>
   <!-- LOGIN FORM -->
       <div class="container">
-        <form class="form" th:object="${userForm}" th:action="@{/Home_Page}" th:method="post" id="login">
+        <form class="form" id="login" th:action="@{/login}" method="POST">
           <h1 class="form__title">Login</h1>
 <!--          <div class="form__message form__message&#45;&#45;error"></div>-->
           <!--message added in JS-->
@@ -66,7 +66,7 @@
               type="password"
               class="form__input"
               autofocus
-              placeholder="Password"
+              th:placeholder="Password"
               name="password"
               required
             />
@@ -74,7 +74,7 @@
             <div class="form__input--error-message"></div>
           </div>
           <!-- button to next page -->
-          <button class="form__button" type="submit" >Continue</button>
+          <button class="form__button" name="Submit" value="Login" type="Submit" th:text="Login"></button>
 <!--           add value="Log in" ^?-->
           <p class="form__text">
             <a href="#" class="form__link">Forgot password?</a>
