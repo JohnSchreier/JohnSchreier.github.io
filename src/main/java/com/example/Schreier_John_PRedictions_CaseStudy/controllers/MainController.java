@@ -61,10 +61,6 @@ public class MainController {
         return "indexerror";
     }
 
-    @GetMapping("/logout")
-    public String logoutOfPage(){
-        return "index";
-    }
 
 
 
