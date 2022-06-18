@@ -29,7 +29,7 @@
     <!--Thymeleaf here for giving back user's first name -->
     <div class="welcome-message">
       <h1 class="welcome-message-font">Welcome,&nbsp </h1>
-      <span sec:authentication="principal.firstName">User</span>
+      <div sec:authorize="isAuthenticated()">name <span th:text ="${#authentication.getPrincipal().getUser().getFirstName()}"></span></div>
       <h1>!</h1>
 
     </div>
@@ -52,22 +52,22 @@
     <div class="PR-edictions-container">
       <h3 class="h3-headers"><u>Your PR-edictions:</u></h3>
       <br /><br />
-      <h4 class="h4-headers">Half-Marathon:&nbsp;<span sec:authentication="principal.halfMarathonPrediction">{halfmarathonprediction}</span></h4>
+<!--      <h4 class="h4-headers">Half-Marathon:&nbsp;<span sec:authentication="principal.halfMarathonPrediction">{halfmarathonprediction}</span></h4>-->
       <br />
-      <h4 class="h4-headers">Marathon:&nbsp;<span sec:authentication="principal.marathonPrediction">{marathonprediction}</span></h4>
+<!--      <h4 class="h4-headers">Marathon:&nbsp;<span sec:authentication="principal.marathonPrediction">{marathonprediction}</span></h4>-->
     </div>
 
     <!-- Your Coach / Your Goals box -->
     <div class="your-coach-your-goals-container">
       <h3 class="h3-headers"><u>Your Coach:</u></h3>
       <br />
-      <h4 class="h4-headers"><span sec:authentication="principal.coachFirstName">{coachFirstName}</span></h4>
-      <h4 class="h4-headers"><span sec:authentication="principal.coachLastName">{coachLastName}</span></h4>
+<!--      <h4 class="h4-headers"><span sec:authentication="principal.coachFirstName">{coachFirstName}</span></h4>-->
+<!--      <h4 class="h4-headers"><span sec:authentication="principal.coachLastName">{coachLastName}</span></h4>-->
       <br />
       <br />
       <h3 class="h3-headers"><u>Your Goals:</u></h3>
       <br />
-      <h4 class="h4-headers"><span sec:authentication="principal.goals">{goals}</span></h4>
+<!--      <h4 class="h4-headers"><span sec:authentication="principal.goals">{goals}</span></h4>-->
     </div>
   </body>
 </html>

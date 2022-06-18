@@ -15,9 +15,8 @@ public class ProfileController {
 
     @GetMapping("/Profile_Page")
     public String showProfilePage(Model model, User user) {
-        model.addAttribute("firstName", userService.getUserByEmail(user.getEmail()).getFirstName());
+//        model.addAttribute("firstName", userService.getUserByEmail(user.getEmail()).getFirstName());
 //        model.addAttribute("halfMarathonPrediction",PRedictionsService);
-        System.out.println(userService.getUserByEmail(user.getEmail()).getFirstName());
         return "Profile_Page";
     }
 }
