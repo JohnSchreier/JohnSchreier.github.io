@@ -29,7 +29,7 @@ public class MainController {
     @GetMapping(value= "/login")
     public ModelAndView login(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/");
+        modelAndView.setViewName("/login");
         return modelAndView;
     }
 //    @GetMapping("/Create_User")
@@ -49,11 +49,6 @@ public class MainController {
         return "redirect:/";
     }
 
-    @GetMapping("/errorPage")
-    public String errorLogin() {
-        return "indexerror";
-    }
-
     @GetMapping("/Home_Page")
     public String showHomePage() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -61,12 +56,12 @@ public class MainController {
 
         return "Home_Page";
     }
-
-    @GetMapping("/Half-Marathon_Predictor")
-    public String showHalfMarathonPredictor() { return "Half_Marathon_Predictor";    }
-
-    @GetMapping("/Marathon_Predictor")
-    public String showMarathonPredictor() {
-        return "Marathon_Predictor";
+    @GetMapping("/errorPage")
+    public String errorLogin() {
+        return "indexerror";
     }
+
+
+
+
 }

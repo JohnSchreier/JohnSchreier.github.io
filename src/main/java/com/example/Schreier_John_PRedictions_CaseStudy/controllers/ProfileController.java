@@ -21,3 +21,6 @@ public class ProfileController {
         return "Profile_Page";
     }
 }
+
+//Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        User user = userService.getUserByEmail(auth.getName())
