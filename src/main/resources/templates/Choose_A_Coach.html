@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 
   <head>
     <meta charset="UTF-8" />
@@ -52,10 +53,10 @@
    </div>     
     <!-- center form box -->
 <!--      th:action=/Choose_Coach_Info" th:method="post" -->
-   <form class="contact-container" >
+   <form class="contact-container" th:action="@{/saveCoachGoalsHistory}" th:object="${userStats}" method="POST">
      <div>Please choose your preferred coach:</div>
      <div class="dropdown-select">
-      <select id="standard-select" th:field="*{coachId}">Choose Your Coach
+      <select id="standard-select" th:field="*{coach}">Choose Your Coach
        <!-- was dropbtn ^ -->
          <option value="hide">Choose Your Coach</option>
          <option th:value="'1'">Coach Breanna</option>

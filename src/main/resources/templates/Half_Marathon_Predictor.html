@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
@@ -101,7 +101,9 @@
           </p>
         <p><button id="predictor_calculate_btn">Calculate Race Time</button></p>
       <!--     Thymeleaf to catch prediction output:       -->
-        <p id="predictor-pace" th:field="*{halfMarathonPrediction}">{prediction}</p>
+        <form th:action="@{/halfMarathonPrediction}" th:object="${PRedictions}" method="POST">
+          <p id="predictor-pace" th:field="*{halfMarathonPrediction}"></p>
+        </form>
       </div>
     </div>
   </body>

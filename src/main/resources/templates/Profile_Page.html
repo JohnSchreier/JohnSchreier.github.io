@@ -28,9 +28,9 @@
   <body>
     <!--Thymeleaf here for giving back user's first name -->
     <div class="welcome-message">
-      <h1 class="welcome-message-font">Welcome,&nbsp </h1>
-      <div sec:authorize="isAuthenticated()">name <span th:text ="${#authentication.getPrincipal().getUser().getFirstName()}"></span></div>
-      <h1>!</h1>
+      <h1 class="welcome-message-font"> </h1>
+      <h1 sec:authorize="isAuthenticated()">Welcome,&nbsp<span th:text ="${#authentication.getPrincipal().getUser().getFirstName()}"></span>!</h1>
+
 
     </div>
     <!-- home page button top left -->
