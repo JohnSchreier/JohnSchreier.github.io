@@ -76,3 +76,7 @@ function generateTable(table, data) {
     }
   }
 }
+let table = document.querySelector("table");
+let data = Object.keys(PaceChart[0]);
+generateTableHead(table, data);
+generateTable(table, PaceChart);
