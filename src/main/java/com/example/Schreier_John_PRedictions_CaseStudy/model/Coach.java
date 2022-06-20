@@ -9,7 +9,7 @@ import java.util.Set;
 public class Coach {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     @Column
     private String coachFirstName;
     @Column
@@ -26,7 +26,7 @@ public class Coach {
         this.coachLastName = coachLastName;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 

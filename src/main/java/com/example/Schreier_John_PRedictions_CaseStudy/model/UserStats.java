@@ -15,7 +15,7 @@ public class UserStats {
     private String history;
 
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    @JoinColumn(name = "coach_id", referencedColumnName = "id")
+//    @JoinColumn(name = "id", referencedColumnName = "id")
     private Coach coach;
 
     @OneToOne

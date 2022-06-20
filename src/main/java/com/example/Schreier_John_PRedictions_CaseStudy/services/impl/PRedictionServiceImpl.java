@@ -38,8 +38,8 @@ public class PRedictionServiceImpl implements PRedictionService {
     }
 
     @Override
-    public PRedictions savePrediction(PRedictions predictions) {
-        return predicRepo.save(predictions);
+    public void savePrediction(PRedictions predictions) {
+        predicRepo.save(predictions);
     }
 
     @Override

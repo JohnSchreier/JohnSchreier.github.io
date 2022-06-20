@@ -11,6 +11,6 @@ import java.util.List;
 public interface PRedictionService extends UserDetailsService {
     String getPredictionByUser(User user) throws PRException;
     List<PRedictions> getAllPredictions();
-    PRedictions savePrediction(PRedictions predictions);
+    void savePrediction(PRedictions predictions);
 
 }
