@@ -5,6 +5,8 @@ import com.example.Schreier_John_PRedictions_CaseStudy.model.User;
 import com.example.Schreier_John_PRedictions_CaseStudy.repository.UserRepository;
 import com.example.Schreier_John_PRedictions_CaseStudy.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -34,7 +36,16 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user);
 
     }
-//add method
+
+    @Override
+    public User getLoggedUser(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentPrincipalName = authentication.getName();
+        User user = getUserByEmail(currentPrincipalName);
+        return user;
+    }
+
+    //add method
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findUserByEmail(email);

@@ -2,13 +2,14 @@ package com.example.Schreier_John_PRedictions_CaseStudy.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-public class User {
+public class User implements Serializable {
 
     @Id
     private String email;
@@ -21,7 +22,7 @@ public class User {
 
 //    @JsonIgnore
     @OneToOne(mappedBy = "user")
-    private UserStats stats;
+    private UserStats user_stats;
 
     @OneToOne(mappedBy= "user")
     private PRedictions predictions;
@@ -70,7 +71,7 @@ public class User {
     }
 
     public UserStats getStats() {
-        return stats;
+        return user_stats;
     }
 
     @Override

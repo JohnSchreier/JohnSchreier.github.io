@@ -1,12 +1,13 @@
 package com.example.Schreier_John_PRedictions_CaseStudy.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table
-public class Coach {
+public class Coach implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;

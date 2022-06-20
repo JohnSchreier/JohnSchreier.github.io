@@ -1,14 +1,16 @@
 package com.example.Schreier_John_PRedictions_CaseStudy.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table
-public class UserStats {
+public class UserStats implements Serializable {
     @Id
-    private String email;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private long id;
     @Column
     private String goals;
     @Column
@@ -19,25 +21,27 @@ public class UserStats {
     private Coach coach;
 
     @OneToOne
+//    @JoinColumn(name="email")
     private User user;
 
 
     public UserStats() {
     }
 
-    public UserStats(String email, String goals, String history, Coach coach) {
-        this.email = email;
+    public UserStats(long id, String goals, String history, Coach coach, User user) {
+        this.id = id;
         this.goals = goals;
         this.history = history;
         this.coach = coach;
+        this.user = user;
     }
 
-    public String getEmail() {
-        return email;
+    public long getId() {
+        return id;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getGoals() {
@@ -68,15 +72,10 @@ public class UserStats {
         return user;
     }
 
-    @Override
-    public String toString() {
-        return "UserStats{" +
-                "email='" + email + '\'' +
-                ", goals='" + goals + '\'' +
-                ", history='" + history + '\'' +
-                ", coach=" + coach +
-                ", user=" + user +
-                '}';
+    public void setUser(User user) {
+        this.user = user;
     }
+
+
 }
 

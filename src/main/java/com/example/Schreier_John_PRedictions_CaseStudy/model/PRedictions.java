@@ -1,10 +1,11 @@
 package com.example.Schreier_John_PRedictions_CaseStudy.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table
-public class PRedictions {
+public class PRedictions implements Serializable {
     @Id
     @GeneratedValue
     private long predictionId;

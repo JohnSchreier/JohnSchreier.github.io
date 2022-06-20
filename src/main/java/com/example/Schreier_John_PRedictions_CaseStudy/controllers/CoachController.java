@@ -1,6 +1,11 @@
 package com.example.Schreier_John_PRedictions_CaseStudy.controllers;
 
+import com.example.Schreier_John_PRedictions_CaseStudy.model.Coach;
+import com.example.Schreier_John_PRedictions_CaseStudy.model.User;
 import com.example.Schreier_John_PRedictions_CaseStudy.model.UserStats;
+import com.example.Schreier_John_PRedictions_CaseStudy.repository.CoachRepository;
+import com.example.Schreier_John_PRedictions_CaseStudy.services.CoachService;
+import com.example.Schreier_John_PRedictions_CaseStudy.services.UserService;
 import com.example.Schreier_John_PRedictions_CaseStudy.services.UserStatsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +19,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class CoachController {
     @Autowired
     UserStatsService userStatsService;
+    @Autowired
+    CoachService coachService;
+    @Autowired
+    UserService userService;
+
     @GetMapping("/Choose_A_Coach")
     public String showChooseACoach(Model model) {
         UserStats userStats = new UserStats();
@@ -22,13 +32,17 @@ public class CoachController {
     }
     @PostMapping("/Choose_A_Coach")
     public String saveUserStats(@ModelAttribute("userStats") UserStats userStats)  {
+        Coach coach = new Coach();
+        User user = new User();
+        user = userService.getLoggedUser();
+        userStats.setUser(user);
         userStatsService.saveUserStats(userStats);
-        return "redirect:/Choose_A_Coach";
+        return "redirect:/Profile_Page";
     }
 //    Should maybe go in the Profile Controller if delete button is created:
     @GetMapping("/deleteUserStats")
-    public String deleteUserStats(String email) {
-        userStatsService.deleteUserStatsByEmail(email);
+    public String deleteUserStats(long id) {
+        userStatsService.deleteUserStatsByEmail(id);
         return "redirect:/Profile_Page";
     }
 }

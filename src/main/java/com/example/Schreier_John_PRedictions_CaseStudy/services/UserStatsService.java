@@ -12,6 +12,6 @@ public interface UserStatsService {
     public List<UserStats> getAllUserStats();
     public UserStats saveUserStats(UserStats userStats);
     public UserStats findUserStatsByEmail(String email);
-    public void deleteUserStatsByEmail(String email);
+    public void deleteUserStatsByEmail(long id);
 
 }

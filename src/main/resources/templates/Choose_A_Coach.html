@@ -58,10 +58,11 @@
      <div class="dropdown-select">
       <select id="standard-select" th:field="*{coach}">Choose Your Coach
        <!-- was dropbtn ^ -->
-         <option value="hide">Choose Your Coach</option>
-         <option th:value="'1'">Coach Breanna</option>
-         <option th:value="'2'">Coach Colin</option>
-         <option th:value="'3'">Coach Dakota</option>
+<!--         <option>Choose Your Coach</option>-->
+          <br>
+         <option th:value="'1'" th:text="Breanna"></option>
+         <option th:value="'2'" th:text="Colin"></option>
+         <option th:value="'3'" th:text="Dakotah"></option>
       </select> 
      </div>
      <label for="goal-textbox"
