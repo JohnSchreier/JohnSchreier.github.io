@@ -19,6 +19,7 @@ public class PRedictionServiceImpl implements PRedictionService {
     private PRedictionsRepository predicRepo;
 
     public PRedictionServiceImpl(PRedictionsRepository predicRepo) {
+        super();
         this.predicRepo = predicRepo;
     }
 

@@ -53,7 +53,7 @@
    </div>     
     <!-- center form box -->
 <!--      th:action=/Choose_Coach_Info" th:method="post" -->
-   <form class="contact-container" th:action="@{/saveCoachGoalsHistory}" th:object="${userStats}" method="POST">
+   <form class="contact-container" th:action="@{/Choose_A_Coach}" th:object="${userStats}" method="POST">
      <div>Please choose your preferred coach:</div>
      <div class="dropdown-select">
       <select id="standard-select" th:field="*{coach}">Choose Your Coach

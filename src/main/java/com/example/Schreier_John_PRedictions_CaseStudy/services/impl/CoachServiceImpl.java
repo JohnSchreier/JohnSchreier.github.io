@@ -11,6 +11,10 @@ public class CoachServiceImpl implements CoachService {
     @Autowired
     CoachRepository coachRepository;
 
+    public CoachServiceImpl(CoachRepository coachRepository) {
+        super();
+        this.coachRepository = coachRepository;
+    }
 
     @Override
     public Coach findCoachById(long id) {
