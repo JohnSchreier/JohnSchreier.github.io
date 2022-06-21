@@ -75,6 +75,9 @@ public class User implements Serializable {
     }
 
     public PRedictions getPredictions() {
+        if (predictions==null){
+            return null;
+        }
         return predictions;
     }
 

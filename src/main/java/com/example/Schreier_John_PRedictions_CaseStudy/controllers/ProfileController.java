@@ -1,6 +1,7 @@
 package com.example.Schreier_John_PRedictions_CaseStudy.controllers;
 
 import com.example.Schreier_John_PRedictions_CaseStudy.exceptions.PRException;
+import com.example.Schreier_John_PRedictions_CaseStudy.model.MyUserDetails;
 import com.example.Schreier_John_PRedictions_CaseStudy.model.PRedictions;
 import com.example.Schreier_John_PRedictions_CaseStudy.model.User;
 import com.example.Schreier_John_PRedictions_CaseStudy.services.PRedictionService;
@@ -32,11 +33,8 @@ public class ProfileController {
     @GetMapping("/Profile_Page")
     public String showProfilePage(Model model, User user) throws PRException {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        userService.getUserByEmail(auth.getName());
-        userStatsService.findUserStatsByEmail(auth.getName()).getCoach();
-        userStatsService.findUserStatsByEmail(auth.getName()).getGoals();
-        userStatsService.findUserStatsByEmail(auth.getName()).getHistory();
-
+        MyUserDetails myUser = (MyUserDetails) auth.getPrincipal();
+        model.addAttribute("halfMarathonPrediction",predictionService.findPredictionsByEmail(myUser.getUser().getEmail()).getHalfMarathonPrediction());
         return "Profile_Page";
     }
 
