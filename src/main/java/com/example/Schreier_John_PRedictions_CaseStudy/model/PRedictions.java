@@ -49,6 +49,10 @@ public class PRedictions implements Serializable {
         this.marathonPrediction = marathonPrediction;
     }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "PRedictions{" +
