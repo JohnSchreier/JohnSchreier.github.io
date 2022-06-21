@@ -95,6 +95,8 @@ predictor_calculate_btn.addEventListener("click",
       if (T2seconds < 10) {
         T2seconds = "0" + T2seconds;
       }
-      predictor_pace.textContent =
-          "Your marathon prediction is  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
-    });
+      let MarathonPrediction = "Your marathon prediction is  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
+      predictor_pace.textContent = MarathonPrediction;
+
+      localStorage.setItem("marathonPrediction",MarathonPrediction)
+});

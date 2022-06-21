@@ -39,6 +39,8 @@ public class ProfileController {
 
         return "Profile_Page";
     }
+
+
 //    @PostMapping("/halfMarathonPrediction")
 //    public String saveHMPrediction(@ModelAttribute("halfMarathonPrediction") PRedictions predictions, Model model) throws PRException {
 //        try {

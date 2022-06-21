@@ -50,7 +50,7 @@ let t1HoursInput = document.getElementById("t1hours"),
 
     predictor_calculate_btn = document.getElementById("predictor_calculate_btn"),
     predictor_pace = document.getElementById("predictor-pace");
- predictor_calculate_btn.addEventListener("click",
+    predictor_calculate_btn.addEventListener("click",
      function () {
        let t1hours = parseFloat(t1HoursInput.value),
            t1minutes = parseFloat(t1MinutesInput.value),
@@ -94,9 +94,13 @@ let t1HoursInput = document.getElementById("t1hours"),
        if (T2seconds < 10) {
          T2seconds = "0" + T2seconds;
        }
-         predictor_pace.textContent =
-             "Your HM prediction is  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
-     });
+
+       let HMPrediction = "Your HM prediction is  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
+       predictor_pace.textContent = HMPrediction;
+
+       localStorage.setItem("halfMarathonPrediction",HMPrediction)
+    });
+
 
 
 
