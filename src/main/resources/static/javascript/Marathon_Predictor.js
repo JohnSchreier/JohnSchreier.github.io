@@ -96,5 +96,5 @@ predictor_calculate_btn.addEventListener("click",
         T2seconds = "0" + T2seconds;
       }
       predictor_pace.textContent =
-          "Your prediction is: " + T2hours + ":" +  T2minutes + ":" + T2seconds;
+          "Your marathon prediction is  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
     });

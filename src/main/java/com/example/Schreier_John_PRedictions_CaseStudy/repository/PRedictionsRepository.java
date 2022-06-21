@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 public interface PRedictionsRepository extends JpaRepository<PRedictions, String> {
-    @Query(value = "SELECT p FROM PRedictions p WHERE p.user= :user")
-    PRedictions findByUser(@Param("user") User user);
+    @Query(value = "SELECT p FROM PRedictions p WHERE p.user.email=?1")
+    PRedictions findByUserEmail(String email);
 
 }

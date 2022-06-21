@@ -95,7 +95,7 @@ let t1HoursInput = document.getElementById("t1hours"),
          T2seconds = "0" + T2seconds;
        }
          predictor_pace.textContent =
-             "Your prediction is: " + T2hours + ":" +  T2minutes + ":" + T2seconds;
+             "Your HM prediction is  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
      });
 
 

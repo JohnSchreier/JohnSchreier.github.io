@@ -74,6 +74,10 @@ public class User implements Serializable {
         return user_stats;
     }
 
+    public PRedictions getPredictions() {
+        return predictions;
+    }
+
     @Override
     public String toString() {
         return "User{" +

@@ -7,7 +7,7 @@ import java.io.Serializable;
 @Table
 public class PRedictions implements Serializable {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long predictionId;
     @Column
     private String halfMarathonPrediction;
