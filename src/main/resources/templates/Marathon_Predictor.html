@@ -85,24 +85,24 @@
         <br>
         <h3>Enter a recent race time and it's corresponding distance </h3>
         <br>
-        <p>
+
         <p class="time-instructions"> (&nbsp;input as "xx&nbsp;:&nbsp;xx&nbsp;:&nbsp;xx"&nbsp;)</p>
-        <p>
+
         <p>
           Time:
           <input type="text" placeholder="Hours" id="t1hours" > :
           <input type="text" placeholder="Minutes" id="t1minutes"> :
           <input type="text" placeholder="Seconds" id="t1seconds">
-          <br>
+            <br>
           Distance:
           <input type="text" placeholder="Miles" id="d1" >
-          <br>
+            <br>
         </p>
-        <p><button id="predictor_calculate_btn">Calculate Race Time</button></p>
-        <!--     Thymeleaf to catch prediction output:       -->
-        <div>
-          <p id="predictor-pace" ></p>
-        </div>
+        <form th:action="@{/Marathon_Predictor/{id} (id=${predictions?.marathonPrediction})}" th:object="${predictions}" method="POST" id="mar-form" >
+          <p><button id="predictor_calculate_btn" >Calculate Race Time</button></p>
+          <!--     Thymeleaf to catch prediction output:       -->
+          <input id="predictor-pace" th:field="*{marathonPrediction}" ></input>
+        </form>
     </div>
     </div>
   </body>
