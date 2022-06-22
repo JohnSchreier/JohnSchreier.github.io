@@ -34,8 +34,8 @@ public class MarathonController {
         return "Marathon_Predictor";
     }
 //    Create:
-    @PostMapping("/Marathon_Predictor/{predictions}")
-    public String saveMarCalculateRaceTime(@PathVariable("predictions") PRedictions predictions)
+    @PostMapping("/Marathon_Predictor")
+    public String saveMarCalculateRaceTime(@ModelAttribute("predictions") PRedictions predictions, Model model)
             throws PRException {
 
         User user = new User();

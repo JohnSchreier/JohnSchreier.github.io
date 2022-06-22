@@ -52,10 +52,6 @@ public class PRedictionsRepositoryTest {
         System.out.println(i);
         assertThat(prediction).isNotNull();
 
-        // update
-        // check if exists (in Get method) > if exists get it> change it and save it>
-        // if doesn't exist>create it > save it
-//    @Query(value = "UPDATE PRedictions pr SET pr.marathonPrediction =:marathonPrediction WHERE pr.user.email=:email")
     }
 
     @Test

@@ -56,4 +56,7 @@ public class PRedictionServiceImpl implements PRedictionService {
         return predicRepo.existsPRedictionsByUser(user);
     }
 
+    public int deletePRedictionsByUser(User user){
+        return predicRepo.deletePRedictionsByUser(user);
+    }
 }

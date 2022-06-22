@@ -16,4 +16,6 @@ public interface PRedictionService {
     public PRedictions getPredictionByUser(User user) throws PRException;
 
     boolean existsPRedictionsByUser(User user);
+
+    int deletePRedictionsByUser(User user);
 }

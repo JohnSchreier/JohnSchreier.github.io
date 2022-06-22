@@ -21,22 +21,14 @@ public class MainController {
         this.userService = userService;
     }
 
-//    @GetMapping("/")
-//    public String loginPage(Model model) {
-//
-//        return "index";
-//    }
+
     @GetMapping(value= "/login")
     public ModelAndView login(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/login");
         return modelAndView;
     }
-//    @GetMapping("/Create_User")
-//    public String createUser(Model model) {
-//        model.addAttribute("userForm", new User());
-//        return "Create_User";
-//    }
+
     @GetMapping("/Create_User")
     public String userRegistration(Model model) {
         User user = new User();

@@ -12,7 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class ProfileController {
@@ -32,13 +32,13 @@ public class ProfileController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         MyUserDetails myUser = (MyUserDetails) auth.getPrincipal();
         try {
-            model.addAttribute("coachFirstName",userStatsService.findUserStatsByEmail(myUser.getUser().getEmail()).getCoach().getCoachFirstName());
-            model.addAttribute("coachLastName",userStatsService.findUserStatsByEmail(myUser.getUser().getEmail()).getCoach().getCoachLastName());
-            model.addAttribute("goals",userStatsService.findUserStatsByEmail(myUser.getUser().getEmail()).getGoals());
-            model.addAttribute("history",userStatsService.findUserStatsByEmail(myUser.getUser().getEmail()).getHistory());
-            model.addAttribute("halfMarathonPrediction",predictionService.findPredictionsByEmail(myUser.getUser().getEmail()).getHalfMarathonPrediction());
-            model.addAttribute("marathonPrediction",predictionService.findPredictionsByEmail(myUser.getUser().getEmail()).getMarathonPrediction());
-        } catch(Exception e){
+            model.addAttribute("coachFirstName", userStatsService.findUserStatsByEmail(myUser.getUser().getEmail()).getCoach().getCoachFirstName());
+            model.addAttribute("coachLastName", userStatsService.findUserStatsByEmail(myUser.getUser().getEmail()).getCoach().getCoachLastName());
+            model.addAttribute("goals", userStatsService.findUserStatsByEmail(myUser.getUser().getEmail()).getGoals());
+            model.addAttribute("history", userStatsService.findUserStatsByEmail(myUser.getUser().getEmail()).getHistory());
+            model.addAttribute("halfMarathonPrediction", predictionService.findPredictionsByEmail(myUser.getUser().getEmail()).getHalfMarathonPrediction());
+            model.addAttribute("marathonPrediction", predictionService.findPredictionsByEmail(myUser.getUser().getEmail()).getMarathonPrediction());
+        } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Something went wrong with the showProfilePage");
         }
@@ -46,28 +46,10 @@ public class ProfileController {
         return "Profile_Page";
     }
 
-
-//    @PostMapping("/halfMarathonPrediction")
-//    public String saveHMPrediction(@ModelAttribute("halfMarathonPrediction") PRedictions predictions, Model model) throws PRException {
-//        try {
-//            User user = new User();
-//            PRedictions predic = new PRedictions();
-//            predictionService.savePrediction(predic);
-//
-//        }catch (PRException e) {
-//            System.out.println(e.getMessage());
-//        }
-//        return "redirect:/Half_Marathon_Predictor";
-//    }
-    @GetMapping("/deleteUserStats")
-    public String deleteUserStats(long id) {
-        userStatsService.deleteUserStatsByEmail(id);
-        return "redirect:/Profile_Page";
+    @GetMapping("/delete/{predictions}")
+    public String deleteUserPRedictions(@PathVariable("predictions") User user) {
+        user = userService.getLoggedUser();
+        predictionService.deletePRedictionsByUser(user);
+        return "redirect/Profile_Page";
     }
-//    @GetMapping("/deletePredictionsByEmail"){
-//        predictionService.deletePredictionsByEmail();
-//    }
 }
-
-//Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//        User user = userService.getUserByEmail(auth.getName())
