@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HalfMarathonController {
@@ -23,23 +20,41 @@ public class HalfMarathonController {
     @Autowired
     UserService userService;
     @GetMapping("/Half-Marathon_Predictor")
-    public String showHalfMarathonPredictorPage(Model model) {
-        PRedictions predictions = new PRedictions();
+    public String showHalfMarathonPredictorPage(Model model) throws PRException {
+        User user = new User();
+        user = userService.getLoggedUser();
 
-        model.addAttribute("predictions",predictions);
-          return "Half_Marathon_Predictor";
+        PRedictions predic = predictionService.getPredictionByUser(user);
+        if(predic !=null) {
+            model.addAttribute("predictions", predic);
+        }else{
+            model.addAttribute("predictions", new PRedictions());
         }
-    @PostMapping("/Half-Marathon_Predictor")
-    public String saveCalculateRaceTime(@ModelAttribute("predictions") PRedictions predictions, Model model)
-                                        throws PRException {
+            model.addAttribute("exists", predictionService.existsPRedictionsByUser(user));
+            return "Half_Marathon_Predictor";
+        }
+//       Create:
+    @PostMapping("/Half-Marathon_Predictor/{predictions}")
+    public String saveHalfCalculateRaceTime(@ModelAttribute("predictions") PRedictions predictions)
+            throws PRException {
 
         User user = new User();
         user = userService.getLoggedUser();
         predictions.setUser(user);
         predictionService.savePrediction(predictions);
-
+        System.out.println("~~~~saveHalfCalculateRaceTime method~~~~");
         return "redirect:/Profile_Page";
         }
-//        PostMapping("/Half-Marathon_Predictor")
-//            public String addHalfMarathon
+//        Update:
+    @RequestMapping(value="/Add_Half-Marathon_Predictor/{predictions}",method = {RequestMethod.GET, RequestMethod.POST})
+    public String saveHalfTimeWhereMarExists(@PathVariable("predictions") String predictions)
+            throws PRException{
+        User user = new User();
+        user = userService.getLoggedUser();
+        predictionService.savePredictionMarExists(predictions,user.getEmail());
+
+        System.out.println("~~~~saveHalfTimeWhereMarExists~~~~");
+        return "redirect:/Profile_Page";
+
     }
+}

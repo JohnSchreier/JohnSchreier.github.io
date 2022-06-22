@@ -99,16 +99,22 @@
             <input type="text" placeholder="Miles" id="d1" >
               <br>
           </p>
-<!--        2 different forms, make th:if on form-->
-<!--        <form th:action="@{/Add_Marathon_Predictor/{id}"-->
-
-        <form th:action="@{/Half-Marathon_Predictor/{id} (id=${predictions?.halfMarathonPrediction})}"
+<!--       2 different forms, make th:if on form-->
+<!--       Update of half marathon prediction       -->
+        <form th:if="${exists}"
+              th:action="@{/Add_Half-Marathon_Predictor/{predictions} (predictions=${predictions?.halfMarathonPrediction})}"
               th:object="${predictions}" method="POST" id="hm-form" >
-
-          <p><button id="predictor_calculate_btn" >Calculate Race Time</button></p>
-      <!--     Thymeleaf to catch prediction output:       -->
+          <p><button id="predictor_calculate_btn" >Update Race Time</button></p>
+<!--       Thymeleaf to catch prediction output:       -->
           <input id="predictor-pace" th:field="*{halfMarathonPrediction}" ></input>
-
+        </form>
+<!--       Creation of half marathon prediction        -->
+        <form th:unless="${exists}"
+                th:action="@{/Half-Marathon_Predictor/{predictions} (predictions=${predictions?.halfMarathonPrediction})}"
+                th:object="${predictions}" method="POST" id="hm-form2" >
+            <p><button id="predictor_calculate_btn" >Calculate Race Time</button></p>
+<!--       Thymeleaf to catch prediction output:       -->
+            <input id="predictor-pace" th:field="*{halfMarathonPrediction}" ></input>
 
         </form>
       </div>

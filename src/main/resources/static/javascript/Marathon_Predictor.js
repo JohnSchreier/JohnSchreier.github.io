@@ -147,11 +147,11 @@ prediction_button_submit.addEventListener("submit", function (event){
         T2seconds = "0" + T2seconds;
     }
 
-    let MarPrediction = "Your marathon prediction is  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
+    let MarPrediction = "Your marathon prediction is:  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
     predictor_pace.value = MarPrediction;
 
-    localStorage.setItem("halfMarathonPrediction",MarPrediction);
-
+    localStorage.setItem("marathonPrediction",MarPrediction);
+    //~~~~~~~~~~^^^^^^^^^^changed from halfMarathonPrediction^^^^
     if(MarPrediction==null){
         console.log("FALSE");
         alert();
@@ -210,7 +210,7 @@ prediction_button_submit2.addEventListener("submit", function (){
     let MarPrediction = "Your marathon prediction is:  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
     predictor_pace.value = MarPrediction;
 
-    localStorage.setItem("halfMarathonPrediction",MarPrediction);
+    localStorage.setItem("marathonPrediction",MarPrediction);
 
     if(MarPrediction==null){
         console.log("FALSE");

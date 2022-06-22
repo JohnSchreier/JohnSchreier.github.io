@@ -100,11 +100,11 @@
         </p>
 <!--        2 forms with Thymeleaf th:if statement for Update or Creation      -->
 <!--        Update of marathon prediction       -->
-<!--        <div class="calculate-if-unless-container" th:if="${exists}">-->
+
           <form th:if="${exists}"
                 th:action="@{/Add_Marathon_Predictor/{predictions} (predictions=${predictions?.marathonPrediction})}"
                 th:object="${predictions}" method="POST" id="mar-form" >
-            <p><button id="predictor_calculate_btn" >Calculate Race Time</button></p>
+            <p><button id="predictor_calculate_btn" >Update Race Time</button></p>
 <!--          Thymeleaf to catch prediction output:       -->
             <input id="predictor-pace" th:field="*{marathonPrediction}" ></input>
           </form>
@@ -116,9 +116,10 @@
             <p><button id="predictor_calculate_btn" >Calculate Race Time</button></p>
 <!--           Thymeleaf to catch prediction output:       -->
             <input id="predictor-pace" th:field="*{marathonPrediction}" ></input>
+
           </form>
         </div>
-    </div>
+      </div>
     </div>
   </body>
 </html>

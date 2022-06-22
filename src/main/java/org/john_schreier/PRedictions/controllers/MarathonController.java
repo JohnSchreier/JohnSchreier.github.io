@@ -11,15 +11,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-
 @Controller
 public class MarathonController {
-
 
     @Qualifier("PRedictionServiceImpl")
     @Autowired
     PRedictionService predictionService;
-
     @Autowired
     UserService userService;
     @GetMapping("/Marathon_Predictor")
@@ -45,7 +42,7 @@ public class MarathonController {
         user = userService.getLoggedUser();
         predictions.setUser(user);
         predictionService.savePrediction(predictions);
-        System.out.println("this is the saveMarCalculateRaceTime method");
+        System.out.println("~~~~this is the saveMarCalculateRaceTime method~~~~");
         return "redirect:/Profile_Page";
     }
 //    Update:
@@ -55,9 +52,8 @@ public class MarathonController {
         User user = new User();
         user = userService.getLoggedUser();
         predictionService.savePredictionHalfExists(predictions, user.getEmail());
-//        predictionService.savePredictionHalfExists(predictions.getMarathonPrediction(), user.getEmail());
 
-        System.out.println("this is the saveMarathonTimeWhereHalfExists method");
+        System.out.println("~~~~this is the saveMarathonTimeWhereHalfExists method~~~~");
         return "redirect:/Profile_Page";
 
     }

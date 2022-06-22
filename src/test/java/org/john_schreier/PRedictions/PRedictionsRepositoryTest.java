@@ -34,7 +34,15 @@ public class PRedictionsRepositoryTest {
         System.out.println("boolean working?");
         assertThat(trueOrFalse).isTrue();
     }
-
+    @Test
+    public void testUpdateHalfMarPredictionByEmail() {
+        int i = predictionsRepository.updateHalfMarPredictionByEmail("ur hm = 2:00", "bob@email.com");
+        System.out.println("did this work?");
+        PRedictions prediction = predictionsRepository.findPredictionsByUser(userRepository.findUserByEmail("bob@email.com"));
+        System.out.println(prediction);
+        System.out.println(i);
+        assertThat(prediction).isNotNull();
+    }
     @Test
     public void testUpdateMarPredictionByEmail(){
         int i = predictionsRepository.updateMarPredictionByEmail("ur mar = 2:00", "bob@email.com");

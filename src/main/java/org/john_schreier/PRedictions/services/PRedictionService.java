@@ -11,7 +11,7 @@ public interface PRedictionService {
     PRedictions findPredictionsByEmail(String email) throws PRException;
     List<PRedictions> getAllPredictions();
     PRedictions savePrediction(PRedictions predictions) throws PRException;
-
+    int savePredictionMarExists(String halfMarathonPrediction, String email) throws PRException;
     int savePredictionHalfExists(String marathonPrediction, String email) throws PRException;
     public PRedictions getPredictionByUser(User user) throws PRException;
 

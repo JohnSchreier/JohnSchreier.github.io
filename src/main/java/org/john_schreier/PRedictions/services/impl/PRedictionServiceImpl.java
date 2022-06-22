@@ -39,6 +39,9 @@ public class PRedictionServiceImpl implements PRedictionService {
         }
         return predicRepo.save(predictions);
     }
+    public int savePredictionMarExists(String halfMarathonPrediction, String email) throws PRException {
+        return predicRepo.updateHalfMarPredictionByEmail(halfMarathonPrediction, email);
+    }
     public int savePredictionHalfExists(String marathonPrediction, String email) throws PRException {
         return predicRepo.updateMarPredictionByEmail(marathonPrediction, email);
     }

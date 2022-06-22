@@ -19,9 +19,14 @@ public interface PRedictionsRepository extends JpaRepository<PRedictions, String
 
     @Modifying
     @Transactional
+    @Query(value = "UPDATE PRedictions pr SET pr.halfMarathonPrediction =:halfMarathonPrediction WHERE pr.user.email=:email")
+    int updateHalfMarPredictionByEmail(@Param("halfMarathonPrediction") String halfMarathonPrediction, @Param("email") String email);
+
+    @Modifying
+    @Transactional
     @Query(value = "UPDATE PRedictions pr SET pr.marathonPrediction =:marathonPrediction WHERE pr.user.email=:email")
     int updateMarPredictionByEmail(@Param("marathonPrediction") String marathonPrediction, @Param("email") String email);
-//    @Query(value = "UPDATE PRedictions SET pr.mara ='Your Mar prediction is 6:00' WHERE  `prediction_id`=1")
+
     int deletePRedictionsByUser(User user);
     PRedictions findPredictionsByUser(User user);
 
