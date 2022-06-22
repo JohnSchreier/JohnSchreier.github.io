@@ -99,6 +99,7 @@
             <input type="text" placeholder="Miles" id="d1" >
               <br>
           </p>
+<!--        write 2 different forms, make th:if on form-->
         <form th:action="@{/Half-Marathon_Predictor/{id} (id=${predictions?.halfMarathonPrediction})}" th:object="${predictions}" method="POST" id="hm-form" >
         <p><button id="predictor_calculate_btn" >Calculate Race Time</button></p>
       <!--     Thymeleaf to catch prediction output:       -->

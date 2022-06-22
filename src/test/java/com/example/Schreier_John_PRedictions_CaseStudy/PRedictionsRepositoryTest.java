@@ -31,15 +31,16 @@ public class PRedictionsRepositoryTest {
     }
     @Test
     public void testUpdateMarPredictionByEmail(){
-        predictionsRepository.updateMarPredictionByEmail("ur mar = 2:00", "test@email.com");
+        int i = predictionsRepository.updateMarPredictionByEmail("ur mar = 2:00", "test@email.com");
         System.out.println("did this work?");
         PRedictions prediction = predictionsRepository.findPredictionsByUser(userRepository.findUserByEmail("test@email.com"));
         System.out.println(prediction);
+        System.out.println(i);
         assertThat(prediction).isNotNull();
 
         // update
-        //check if exists (in Get method) > if exists get it> change it and save it>
-        //if doesn't exist>create it > save it
+        // check if exists (in Get method) > if exists get it> change it and save it>
+        // if doesn't exist>create it > save it
 //    @Query(value = "UPDATE PRedictions pr SET pr.marathonPrediction =:marathonPrediction WHERE pr.user.email=:email")
     }
 

@@ -13,6 +13,6 @@ public interface PRedictionService {
     List<PRedictions> getAllPredictions();
     PRedictions savePrediction(PRedictions predictions) throws PRException;
 
-    void savePredictionHalfExists(String marathonPrediction, String email) throws PRException;
+    int savePredictionHalfExists(String marathonPrediction, String email) throws PRException;
     public PRedictions getPredictionByUser(User user) throws PRException;
 }
