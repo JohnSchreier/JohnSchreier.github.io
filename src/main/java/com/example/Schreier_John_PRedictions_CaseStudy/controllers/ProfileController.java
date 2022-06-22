@@ -34,7 +34,12 @@ public class ProfileController {
     public String showProfilePage(Model model, User user) throws PRException {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         MyUserDetails myUser = (MyUserDetails) auth.getPrincipal();
-        model.addAttribute("halfMarathonPrediction",predictionService.findPredictionsByEmail(myUser.getUser().getEmail()).getHalfMarathonPrediction());
+        try {
+            model.addAttribute("halfMarathonPrediction",predictionService.findPredictionsByEmail(myUser.getUser().getEmail()).getHalfMarathonPrediction());
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+
         return "Profile_Page";
     }
 

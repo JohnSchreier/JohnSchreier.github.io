@@ -44,14 +44,14 @@ public class MarathonController {
 
         return "redirect:/Profile_Page";
     }
-//    @PostMapping("/Add_Marathon_Predictor")
-//    public String saveMarathonTimeWhereHalfExists(@ModelAttribute("predictions") PRedictions predictions, Model model)
-//        throws PRException {
-//        User user = new User();
-//        user = userService.getLoggedUser();
-//        predictions.setUser(user);
-//        predictionService.savePredictionHalfExists(predictions.getMarathonPrediction(), user.getEmail());
-//        return "redirect:/Marathon_Predictor";
-//    }
+    @PostMapping("/Add_Marathon_Predictor")
+    public String saveMarathonTimeWhereHalfExists(@ModelAttribute("predictions") PRedictions predictions, Model model)
+        throws PRException {
+        User user = new User();
+        user = userService.getLoggedUser();
+        predictions.setUser(user);
+        predictionService.savePredictionHalfExists(predictions.getMarathonPrediction(), user.getEmail());
+        return "redirect:/Marathon_Predictor";
+    }
 
 }
