@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 @Controller
 public class MarathonController {
 
+
     @Qualifier("PRedictionServiceImpl")
     @Autowired
     PRedictionService predictionService;
@@ -25,8 +26,10 @@ public class MarathonController {
     @Autowired
     UserService userService;
     @GetMapping("/Marathon_Predictor")
-    public String showMarathonPredictorPage(Model model) {
-        PRedictions predic = new PRedictions();
+    public String showMarathonPredictorPage(Model model) throws PRException {
+        User user = new User();
+        user = userService.getLoggedUser();
+        PRedictions predic = predictionService.getPredictionByUser(user);
         model.addAttribute("predictions",predic);
         return "Marathon_Predictor";
     }
@@ -41,4 +44,14 @@ public class MarathonController {
 
         return "redirect:/Profile_Page";
     }
+//    @PostMapping("/Add_Marathon_Predictor")
+//    public String saveMarathonTimeWhereHalfExists(@ModelAttribute("predictions") PRedictions predictions, Model model)
+//        throws PRException {
+//        User user = new User();
+//        user = userService.getLoggedUser();
+//        predictions.setUser(user);
+//        predictionService.savePredictionHalfExists(predictions.getMarathonPrediction(), user.getEmail());
+//        return "redirect:/Marathon_Predictor";
+//    }
+
 }

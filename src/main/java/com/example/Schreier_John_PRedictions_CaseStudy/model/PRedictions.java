@@ -45,9 +45,9 @@ public class PRedictions implements Serializable {
     }
 
     public String getMarathonPrediction() {
-        if (marathonPrediction==null){
-            return "Marathon Prediction Yet!";
-        }
+//        if (marathonPrediction==null){
+//            return "Marathon Prediction Yet!";
+//        }
         return marathonPrediction;
     }
 

@@ -24,8 +24,9 @@ public class HalfMarathonController {
     UserService userService;
     @GetMapping("/Half-Marathon_Predictor")
     public String showHalfMarathonPredictorPage(Model model) {
-        PRedictions predic = new PRedictions();
-        model.addAttribute("predictions",predic);
+        PRedictions predictions = new PRedictions();
+
+        model.addAttribute("predictions",predictions);
           return "Half_Marathon_Predictor";
         }
     @PostMapping("/Half-Marathon_Predictor")
@@ -39,4 +40,6 @@ public class HalfMarathonController {
 
         return "redirect:/Profile_Page";
         }
+//        PostMapping("/Half-Marathon_Predictor")
+//            public String addHalfMarathon
     }

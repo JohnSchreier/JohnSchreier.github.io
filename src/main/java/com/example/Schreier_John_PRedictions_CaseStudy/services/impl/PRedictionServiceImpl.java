@@ -2,9 +2,11 @@ package com.example.Schreier_John_PRedictions_CaseStudy.services.impl;
 
 import com.example.Schreier_John_PRedictions_CaseStudy.exceptions.PRException;
 import com.example.Schreier_John_PRedictions_CaseStudy.model.PRedictions;
+import com.example.Schreier_John_PRedictions_CaseStudy.model.User;
 import com.example.Schreier_John_PRedictions_CaseStudy.repository.PRedictionsRepository;
 import com.example.Schreier_John_PRedictions_CaseStudy.services.PRedictionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -38,5 +40,13 @@ public class PRedictionServiceImpl implements PRedictionService {
         }
         return predicRepo.save(predictions);
     }
-
+    public PRedictions savePredictionHalfExists(String marathonPrediction, String email) throws PRException {
+        return predicRepo.updateMarPredictionByEmail(marathonPrediction, email);
+    }
+    public PRedictions getPredictionByUser(User user) throws PRException {
+        if (user == null) {
+            throw new PRException("No user found");
+        }
+        return predicRepo.findPredictionsByUser(user);
+    }
 }
