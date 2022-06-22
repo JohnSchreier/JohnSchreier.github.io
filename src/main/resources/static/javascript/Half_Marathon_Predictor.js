@@ -147,7 +147,7 @@ let t1HoursInput = document.getElementById("t1hours"),
             T2seconds = "0" + T2seconds;
         }
 
-        let HMPrediction = "Your HM prediction is  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
+        let HMPrediction = "Your half marathon prediction is:  " + T2hours + ":" +  T2minutes + ":" + T2seconds;
         predictor_pace.value = HMPrediction;
 
         localStorage.setItem("halfMarathonPrediction",HMPrediction);

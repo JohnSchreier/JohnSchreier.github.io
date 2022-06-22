@@ -98,11 +98,26 @@
           <input type="text" placeholder="Miles" id="d1" >
             <br>
         </p>
-        <form th:action="@{/Marathon_Predictor/{id} (id=${predictions?.marathonPrediction})}" th:object="${predictions}" method="POST" id="mar-form" >
-          <p><button id="predictor_calculate_btn" >Calculate Race Time</button></p>
-          <!--     Thymeleaf to catch prediction output:       -->
-          <input id="predictor-pace" th:field="*{marathonPrediction}" ></input>
-        </form>
+<!--        2 forms with Thymeleaf th:if statement for Update or Creation      -->
+<!--        Update of marathon prediction       -->
+<!--        <div class="calculate-if-unless-container" th:if="${exists}">-->
+          <form th:if="${exists}"
+                th:action="@{/Add_Marathon_Predictor/{predictions} (predictions=${predictions?.marathonPrediction})}"
+                th:object="${predictions}" method="POST" id="mar-form" >
+            <p><button id="predictor_calculate_btn" >Calculate Race Time</button></p>
+<!--          Thymeleaf to catch prediction output:       -->
+            <input id="predictor-pace" th:field="*{marathonPrediction}" ></input>
+          </form>
+
+<!--          Creation of marathon prediction       -->
+          <form th:unless="${exists}"
+                th:action="@{/Marathon_Predictor/{predictions} (predictions=${predictions?.marathonPrediction})}"
+                th:object="${predictions}" method="POST" id="mar-form2" >
+            <p><button id="predictor_calculate_btn" >Calculate Race Time</button></p>
+<!--           Thymeleaf to catch prediction output:       -->
+            <input id="predictor-pace" th:field="*{marathonPrediction}" ></input>
+          </form>
+        </div>
     </div>
     </div>
   </body>

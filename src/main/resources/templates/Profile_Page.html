@@ -55,24 +55,24 @@
       <h4 class="h4-headers"><span th:text ="${halfMarathonPrediction}"></span></h4>
 
       <br />
-<!--      <h4 class="h4-headers"><span th:text ="${#authentication.getPrincipal().getUser().getPredictions().getMarathonPrediction()}"></span></h4>-->
+      <h4 class="h4-headers"><span th:text ="${marathonPrediction}"></span></h4>
     </div>
 
     <!-- Your Coach / Your Goals box -->
     <div class="your-coach-your-goals-container">
       <h3 class="h3-headers"><u>Your Coach:</u></h3>
       <br />
-      <h4 class="h4-headers"><span th:text ="${#authentication.getPrincipal().getUser().getStats().getCoach().getCoachFirstName()}"></span>&nbsp
-                              <span th:text ="${#authentication.getPrincipal().getUser().getStats().getCoach().getCoachLastName()}"></span></h4>
+      <h4 class="h4-headers"><span th:text ="${coachFirstName}"></span>&nbsp
+                              <span th:text ="${coachLastName}"></span></h4>
 
       <br />
       <h3 class="h3-headers"><u>Your Goals:</u></h3>
       <br />
-      <h4 class="h4-headers">"<span th:text ="${#authentication.getPrincipal().getUser().getStats().getGoals()}"></span>"</h4>
+      <h4 class="h4-headers">"<span th:text ="${goals}"></span>"</h4>
       <br />
       <h3 class="h3-headers"><u>Your History:</u></h3>
       <br />
-      <h4 class="h4-headers">"<span th:text ="${#authentication.getPrincipal().getUser().getStats().getHistory()}"></span>"</h4>
+      <h4 class="h4-headers">"<span th:text ="${history}"></span>"</h4>
     </div>
   </body>
 </html>
