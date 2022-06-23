@@ -42,14 +42,14 @@ public class ProfileController {
             e.printStackTrace();
             System.out.println("Something went wrong with the showProfilePage");
         }
-
         return "Profile_Page";
     }
 
-    @GetMapping("/delete/{predictions}")
-    public String deleteUserPRedictions(@PathVariable("predictions") User user) {
-        user = userService.getLoggedUser();
+    @GetMapping("/delete")
+    public String deleteUserPRedictions() {
+        User user = userService.getLoggedUser();
         predictionService.deletePRedictionsByUser(user);
-        return "redirect/Profile_Page";
+        System.out.println("~~~~~~~~~~~~~~User Predictions Removed~~~~~~~~~~");
+        return "Profile_Page";
     }
 }

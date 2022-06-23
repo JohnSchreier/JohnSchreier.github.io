@@ -57,5 +57,4 @@ public class MarathonController {
         return "redirect:/Profile_Page";
 
     }
-
 }
