@@ -37,13 +37,16 @@ body {
   .h1-header {
     color: white;
     font-size: 3em;
+    font-family: "Koulen", cursive;
   }
   .h2-header {
-    font-size: 30px;
+    font-size: 37px;
     text-decoration: underline;
+    font-family: "Koulen", cursive;
   }
   .h3-header {
-    font-size: 25px;
+    font-size: 30px;
+    font-family: "Koulen", cursive;
   }
   .user-profile-button{
     grid-column: 3;
@@ -96,12 +99,13 @@ body {
     color: white;
     border: 2px solid white;
   }
+  .time-instructions{
+    font-size: 21px;
+  }
   input {
     width: 90px;
   }
-  #time-instructions{
-    font-size: 20px;
-  }
+
   #pace {
     font-size: 30px;
   }

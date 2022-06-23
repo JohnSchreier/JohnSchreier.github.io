@@ -59,7 +59,7 @@
 <!-- Calculator half marathon pace -->
 <div class="calculator-half-marathon-pace">
     <br>
-    <h2 class="h2-header">Running Pace Calculator</h2>
+    <h2 class="h2-header">Running Pace Calculator:</h2>
     <div id="calculator">
         <br>
         <h3 class="h3-header">
@@ -67,7 +67,7 @@
             pace!
         </h3>
         <br>
-        <p>
+        <br>
         <p class="time-instructions"> (&nbsp;input as "xx&nbsp;:&nbsp;xx&nbsp;:&nbsp;xx"&nbsp;)</p>
         <p>
             Time: <input type="text" placeholder="hours" id="hours"/> :
@@ -83,10 +83,10 @@
 <!-- Predictor half marathon  -->
 <div class="predictor-half-marathon">
     <br>
-    <h2 class="h2-header">Race Predictor</h2>
+    <h2 class="h2-header">Race Predictor:</h2>
     <div id="prediction-calculator">
         <br>
-        <h3>Enter a recent race time and it's corresponding distance </h3>
+        <h3 class="h3-header">Enter a recent race time and it's corresponding distance </h3>
         <br>
 
         <p class="time-instructions"> (&nbsp;input as "xx&nbsp;:&nbsp;xx&nbsp;:&nbsp;xx"&nbsp;)</p>
@@ -107,7 +107,7 @@
               th:action="@{/Add_Half-Marathon_Predictor/{predictions} (predictions=${predictions?.halfMarathonPrediction})}"
               th:object="${predictions}" method="POST" id="hm-form">
             <p>
-                <button id="predictor_calculate_btn">Update Race Time</button>
+                <button id="predictor_calculate_btn">Update Race Times</button>
             </p>
             <!--       Thymeleaf to catch prediction output:       -->
             <input id="predictor-pace" th:field="*{halfMarathonPrediction}"></input>
