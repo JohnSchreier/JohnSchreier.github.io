@@ -54,6 +54,7 @@ let t1HoursInput = document.getElementById("t1hours"),
 
 //Marathon Prediction Calculator Update Form 1 (th:if "switch")
 let prediction_button_submit = document.getElementById("mar-form")
+if (prediction_button_submit!=null){
 prediction_button_submit.addEventListener("submit", function (event) {
     event.preventDefault()
     let t1hours = parseFloat(t1HoursInput.value),
@@ -112,9 +113,10 @@ prediction_button_submit.addEventListener("submit", function (event) {
     }
     window.location.href = `/Add_Marathon_Predictor/${MarPrediction}`
     return true;
-});
+});}
 //Marathon Predictor Create form 2
 let prediction_button_submit2 = document.getElementById("mar-form2")
+if(prediction_button_submit2 != null){
 prediction_button_submit2.addEventListener("submit", function () {
 
     let t1hours = parseFloat(t1HoursInput.value),
@@ -173,4 +175,4 @@ prediction_button_submit2.addEventListener("submit", function () {
     }
 
     return true;
-});
+});}
