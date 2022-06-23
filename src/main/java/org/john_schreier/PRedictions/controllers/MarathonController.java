@@ -38,8 +38,7 @@ public class MarathonController {
     public String saveMarCalculateRaceTime(@ModelAttribute("predictions") PRedictions predictions, Model model)
             throws PRException {
 
-        User user = new User();
-        user = userService.getLoggedUser();
+        User user = userService.getLoggedUser();
         predictions.setUser(user);
         predictionService.savePrediction(predictions);
         System.out.println("~~~~this is the saveMarCalculateRaceTime method~~~~");

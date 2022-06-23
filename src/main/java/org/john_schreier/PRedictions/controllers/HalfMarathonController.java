@@ -35,13 +35,11 @@ public class HalfMarathonController {
         }
 //       Create:
     @PostMapping("/Half-Marathon_Predictor")
-    public String saveHalfCalculateRaceTime(PRedictions predictions, @RequestParam(value="predictor-pace") String halfMarathonPrediction)
+    public String saveHalfCalculateRaceTime(@ModelAttribute PRedictions predictions, Model model)
             throws PRException {
 
-        User user = new User();
-        user = userService.getLoggedUser();
+        User user = userService.getLoggedUser();
         predictions.setUser(user);
-        predictions.setHalfMarathonPrediction(halfMarathonPrediction);
         predictionService.savePrediction(predictions);
         System.out.println("~~~~saveHalfCalculateRaceTime method~~~~");
         return "redirect:/Profile_Page";
@@ -53,7 +51,6 @@ public class HalfMarathonController {
         User user = new User();
         user = userService.getLoggedUser();
         predictionService.savePredictionMarExists(predictions,user.getEmail());
-
         System.out.println("~~~~saveHalfTimeWhereMarExists~~~~");
         return "redirect:/Profile_Page";
 

@@ -51,7 +51,9 @@ let t1HoursInput = document.getElementById("t1hours"),
     predictor_calculate_btn = document.getElementById("predictor_calculate_btn"),
     predictor_pace = document.getElementById("predictor-pace");
 //Half Marathon Prediction Calculator form 1 (th:if "switch")
+
 let prediction_button_submit = document.getElementById("hm-form")
+if (prediction_button_submit!=null){
 prediction_button_submit.addEventListener("submit", function (event) {
     event.preventDefault()
     let t1hours = parseFloat(t1HoursInput.value),
@@ -110,9 +112,10 @@ prediction_button_submit.addEventListener("submit", function (event) {
 
     window.location.href = `/Add_Half-Marathon_Predictor/${HMPrediction}`
     return true;
-});
+});}
 //Half Marathon Prediction Calculator form 2 (th:if "switch")
 let prediction_button_submit2 = document.getElementById("hm-form2")
+if(prediction_button_submit2 != null){
 prediction_button_submit2.addEventListener("submit", function () {
 
     let t1hours = parseFloat(t1HoursInput.value),
@@ -171,7 +174,7 @@ prediction_button_submit2.addEventListener("submit", function () {
     }
 
     return true;
-});
+});}
 
 
 
