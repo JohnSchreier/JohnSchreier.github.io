@@ -86,4 +86,16 @@ body {
     margin-left: -35%;
     z-index: 3;
   }
-
+#delete-predictions-button{
+    outline: none;
+    font-family: "Koulen", cursive;
+    justify-self: center;
+    margin-bottom: 25vh;
+    font-size: 3vh;
+    position: relative;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    border: none;
+}

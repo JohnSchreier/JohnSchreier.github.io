@@ -93,14 +93,6 @@ body {
   color: white;
   border: none;
 }
-#submitButton2 {
-  width: 110px;
-  height: 60px;
-  font-size: .8em;
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-}
 .paceChart-container{
   grid-column: 1;
   grid-row: 2;

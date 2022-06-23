@@ -111,7 +111,7 @@
 
 <!--          Creation of marathon prediction       -->
           <form th:unless="${exists}"
-                th:action="@{/Marathon_Predictor/{predictions} (predictions=${predictions?.marathonPrediction})}"
+                th:action="@{/Marathon_Predictor}"
                 th:object="${predictions}" method="POST" id="mar-form2" >
             <p><button id="predictor_calculate_btn" >Calculate Race Time</button></p>
 <!--           Thymeleaf to catch prediction output:       -->
