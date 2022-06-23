@@ -43,6 +43,7 @@ public class MarathonController {
         predictions.setUser(user);
         predictionService.savePrediction(predictions);
         System.out.println("~~~~this is the saveMarCalculateRaceTime method~~~~");
+        System.out.println(predictions);
         return "redirect:/Profile_Page";
     }
 //    Update:

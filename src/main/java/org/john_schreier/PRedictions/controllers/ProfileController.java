@@ -45,7 +45,7 @@ public class ProfileController {
         }
         return "Profile_Page";
     }
-
+//  Delete both PRedictions:
     @GetMapping("/delete")
     public RedirectView deleteUserPRedictions() {
         User user = userService.getLoggedUser();
