@@ -35,12 +35,13 @@ public class HalfMarathonController {
         }
 //       Create:
     @PostMapping("/Half-Marathon_Predictor")
-    public String saveHalfCalculateRaceTime(@ModelAttribute("predictions") PRedictions predictions, Model model)
+    public String saveHalfCalculateRaceTime(PRedictions predictions, @RequestParam(value="predictor-pace") String halfMarathonPrediction)
             throws PRException {
 
         User user = new User();
         user = userService.getLoggedUser();
         predictions.setUser(user);
+        predictions.setHalfMarathonPrediction(halfMarathonPrediction);
         predictionService.savePrediction(predictions);
         System.out.println("~~~~saveHalfCalculateRaceTime method~~~~");
         return "redirect:/Profile_Page";

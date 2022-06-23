@@ -13,6 +13,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 public class ProfileController {
@@ -46,10 +47,10 @@ public class ProfileController {
     }
 
     @GetMapping("/delete")
-    public String deleteUserPRedictions() {
+    public RedirectView deleteUserPRedictions() {
         User user = userService.getLoggedUser();
         predictionService.deletePRedictionsByUser(user);
         System.out.println("~~~~~~~~~~~~~~User Predictions Removed~~~~~~~~~~");
-        return "Profile_Page";
+        return new RedirectView("/Profile_Page");
     }
 }
