@@ -133,9 +133,11 @@ li {
 }
 .dropdown:hover .dropbtn {
   background-color: var(--color-primary);
+  border: 2px solid white;
 }
 .dropdown-content a:hover {
   background-color: #ddd;
+
 }
 .dropdown {
   position: relative;
@@ -166,9 +168,11 @@ li {
 }
 .dropdown2:hover .dropdown-content {
   display: block;
+
 }
 .dropdown2:hover .dropbtn {
   background-color: var(--color-primary);
+  border: 2px solid white;
 }
 .dropdown3 {
   grid-column: 3;
@@ -183,6 +187,7 @@ li {
 }
 .dropdown3:hover .dropbtn {
   background-color: var(--color-primary);
+  border: 2px solid white;
 }
 .successContainer {
   justify-self: center;
@@ -190,7 +195,6 @@ li {
   grid-row: 3;
 }
 .findSuccess {
-
   outline: none;
   font-family: "Koulen", cursive;
   justify-self: center;
@@ -202,4 +206,7 @@ li {
   padding: 30px;
   font-size: 30px;
   border: none;
+}
+.findSuccess:hover {
+  border: 2px solid white;
 }

@@ -44,7 +44,7 @@ body {
   border: none;
 }
 .dropdown-select {
-  
+  border: 2px solid white;
   background-color: var(--color-primary);
   font-family: "Koulen", cursive;
   justify-self: center;
@@ -91,7 +91,7 @@ body {
   font-size: .8em;
   background-color: var(--color-primary);
   color: white;
-  border: none;
+  border: 2px solid white;
 }
 .paceChart-container{
   grid-column: 1;
