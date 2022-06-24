@@ -13,7 +13,7 @@ import java.util.List;
 public class UserStatsServiceImpl implements UserStatsService {
 //    Implementation of the UserStats service which defines the logic for finding
 //    a user's goals and history. Methods for updating and deleting goals/history have
-//    been defined for future implementation. 
+//    been defined for future implementation.
     @Autowired
     UserStatsRepository userStatsRepository;
 

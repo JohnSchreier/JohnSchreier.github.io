@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CoachServiceImpl implements CoachService {
 //    Implementation for connecting Coach repo to the controllers
+//    Methods mostly created for future admin implementation
     @Autowired
     CoachRepository coachRepository;
 
