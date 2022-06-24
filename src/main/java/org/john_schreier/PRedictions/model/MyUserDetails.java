@@ -5,8 +5,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-public class MyUserDetails implements UserDetails{
-
+public class MyUserDetails implements UserDetails {
+    //  This class is used by Spring Security. It uses a User object to verify with the database if that user is authorized to access the website.
     private User user;
 
     public MyUserDetails(User user) {
@@ -18,6 +18,7 @@ public class MyUserDetails implements UserDetails{
     public String getPassword() {
         return user.getPassword();
     }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
@@ -27,31 +28,28 @@ public class MyUserDetails implements UserDetails{
     public String getUsername() {
         return user.getEmail();
     }
+
     public User getUser() {
         return user;
     }
 
     @Override
-    public boolean isAccountNonExpired()
-    {
+    public boolean isAccountNonExpired() {
         return true;
     }
 
     @Override
-    public boolean isAccountNonLocked()
-    {
+    public boolean isAccountNonLocked() {
         return true;
     }
 
     @Override
-    public boolean isCredentialsNonExpired()
-    {
+    public boolean isCredentialsNonExpired() {
         return true;
     }
 
     @Override
-    public boolean isEnabled()
-    {
+    public boolean isEnabled() {
         return true;
     }
 }

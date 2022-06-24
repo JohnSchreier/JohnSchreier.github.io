@@ -7,10 +7,13 @@ import org.john_schreier.PRedictions.repository.PRedictionsRepository;
 import org.john_schreier.PRedictions.services.PRedictionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
 public class PRedictionServiceImpl implements PRedictionService {
+//    Implementation of PRedictionService which defines the logic of each PRedictionService method.
+//    Bridge between the PRedictionService Repo and the calling of CRUD on the view/controllers.
     @Autowired
     private PRedictionsRepository predicRepo;
 
@@ -21,7 +24,7 @@ public class PRedictionServiceImpl implements PRedictionService {
 
     @Override
     public PRedictions findPredictionsByEmail(String email) throws PRException {
-        if(email == null){
+        if (email == null) {
             throw new PRException("PR's not found with that email");
         }
         return predicRepo.findPredictionsByEmail(email);
@@ -39,9 +42,11 @@ public class PRedictionServiceImpl implements PRedictionService {
         }
         return predicRepo.save(predictions);
     }
+
     public int savePredictionMarExists(String halfMarathonPrediction, String email) throws PRException {
         return predicRepo.updateHalfMarPredictionByEmail(halfMarathonPrediction, email);
     }
+
     public int savePredictionHalfExists(String marathonPrediction, String email) throws PRException {
         return predicRepo.updateMarPredictionByEmail(marathonPrediction, email);
     }
@@ -52,11 +57,12 @@ public class PRedictionServiceImpl implements PRedictionService {
         }
         return predicRepo.findPredictionsByUser(user);
     }
-    public boolean existsPRedictionsByUser(User user){
+
+    public boolean existsPRedictionsByUser(User user) {
         return predicRepo.existsPRedictionsByUser(user);
     }
 
-    public int deletePRedictionsByUser(User user){
+    public int deletePRedictionsByUser(User user) {
         return predicRepo.deletePRedictionsByUser(user);
     }
 }

@@ -6,7 +6,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User implements Serializable {
-
+    //  This class binds to a User's log in information
     @Id
     private String email;
     @Column
@@ -16,11 +16,11 @@ public class User implements Serializable {
     @Column
     private String password;
 
-//    @JsonIgnore
+    //  Each user gets one set of PRedictions and one set of UserStats (and Coach)
     @OneToOne(mappedBy = "user")
     private UserStats user_stats;
 
-    @OneToOne(mappedBy= "user")
+    @OneToOne(mappedBy = "user")
     private PRedictions predictions;
 
     public User() {
@@ -71,7 +71,7 @@ public class User implements Serializable {
     }
 
     public PRedictions getPredictions() {
-        if (predictions==null){
+        if (predictions == null) {
             return null;
         }
         return predictions;

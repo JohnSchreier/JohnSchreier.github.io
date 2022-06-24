@@ -19,24 +19,26 @@ public class MarathonController {
     PRedictionService predictionService;
     @Autowired
     UserService userService;
+
+    //  Maps marathon predictor page
     @GetMapping("/Marathon_Predictor")
     public String showMarathonPredictorPage(Model model) throws PRException {
         User user = new User();
         user = userService.getLoggedUser();
 
         PRedictions predic = predictionService.getPredictionByUser(user);
-        if(predic !=null) {
+        if (predic != null) {
             model.addAttribute("predictions", predic);
-        }else{
-            model.addAttribute("predictions",new PRedictions());
+        } else {
+            model.addAttribute("predictions", new PRedictions());
         }
         model.addAttribute("exists", predictionService.existsPRedictionsByUser(user));
         return "Marathon_Predictor";
     }
-//    Create:
+
+    //    Create new marathon prediction:
     @PostMapping("/Marathon_Predictor")
-    public String saveMarCalculateRaceTime(@ModelAttribute("predictions") PRedictions predictions, Model model)
-            throws PRException {
+    public String saveMarCalculateRaceTime(@ModelAttribute("predictions") PRedictions predictions, Model model) throws PRException {
 
         User user = userService.getLoggedUser();
         predictions.setUser(user);
@@ -45,10 +47,10 @@ public class MarathonController {
         System.out.println(predictions);
         return "redirect:/Profile_Page";
     }
-//    Update:
-    @RequestMapping(value="/Add_Marathon_Predictor/{predictions}",method = {RequestMethod.GET, RequestMethod.POST})
-    public String saveMarathonTimeWhereHalfExists(@PathVariable("predictions") String predictions)
-            throws PRException {
+
+    //    Updates existing set of predictions with a new marathon prediction:
+    @RequestMapping(value = "/Add_Marathon_Predictor/{predictions}", method = {RequestMethod.GET, RequestMethod.POST})
+    public String saveMarathonTimeWhereHalfExists(@PathVariable("predictions") String predictions) throws PRException {
         User user = new User();
         user = userService.getLoggedUser();
         predictionService.savePredictionHalfExists(predictions, user.getEmail());

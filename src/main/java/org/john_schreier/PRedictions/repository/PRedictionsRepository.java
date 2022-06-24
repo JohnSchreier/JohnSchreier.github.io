@@ -12,9 +12,14 @@ import javax.transaction.Transactional;
 
 @Repository
 public interface PRedictionsRepository extends JpaRepository<PRedictions, String> {
+    //      This repo connects to the PRedictions table in the db.
+    //      Methods for calling User PRedictions by email or User,
+    //      seeing if they exist, updating both half-marathon and
+    //      marathon PRedictions in the db, and deleting PRedictions.
     @Query(value = "SELECT p FROM PRedictions p WHERE p.user.email=?1")
     PRedictions findPredictionsByEmail(String email);
 
+    PRedictions findPredictionsByUser(User user);
     boolean existsPRedictionsByUser(User user);
 
     @Modifying
@@ -29,8 +34,5 @@ public interface PRedictionsRepository extends JpaRepository<PRedictions, String
 
     @Transactional
     int deletePRedictionsByUser(User user);
-
-    PRedictions findPredictionsByUser(User user);
-
 
 }

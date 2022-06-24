@@ -6,8 +6,9 @@ import java.io.Serializable;
 @Entity
 @Table
 public class PRedictions implements Serializable {
+    //    This class binds a user's personalized race predictions to an object to be saved in the db
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long predictionId;
     @Column
     private String halfMarathonPrediction;
@@ -16,7 +17,7 @@ public class PRedictions implements Serializable {
     @OneToOne
     private User user;
 
-    public PRedictions(){
+    public PRedictions() {
     }
 
     public PRedictions(long predictionId, String halfMarathonPrediction, String marathonPrediction) {

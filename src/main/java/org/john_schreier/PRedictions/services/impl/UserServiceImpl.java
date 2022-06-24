@@ -15,6 +15,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {
+//    Implmentation of the UserService which connects the User repo to the view.
+//    Used for logging in and registering, as well as checking who the logged in user is.
     @Autowired
     private UserRepository userRepository;
     @Autowired
@@ -28,6 +30,7 @@ public class UserServiceImpl implements UserService {
         return user;
 
     }
+
     //    method to save to repo and encrypt user password:
     @Override
     public User registerUser(User user) {
@@ -38,7 +41,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getLoggedUser(){
+    public User getLoggedUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentPrincipalName = authentication.getName();
         User user = getUserByEmail(currentPrincipalName);
@@ -49,8 +52,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findUserByEmail(email);
-        System.out.println("User:  "+user);
-        if (user == null){
+        System.out.println("User:  " + user);
+        if (user == null) {
             throw new UsernameNotFoundException("Invalid username or password.");
         }
         return new MyUserDetails(user);

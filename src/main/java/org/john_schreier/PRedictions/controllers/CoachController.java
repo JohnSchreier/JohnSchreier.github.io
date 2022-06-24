@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class CoachController {
+    //    Controller for Choose_A_Coach page where users choose a coach, and input their goals and fitness history
     @Autowired
     UserStatsService userStatsService;
     @Autowired
@@ -29,6 +30,8 @@ public class CoachController {
         model.addAttribute("userStats", userStats);
         return "Choose_A_Coach";
     }
+
+    //    Binds users input to a UserStats model. Each user has one UserStats row.
     @PostMapping("/Choose_A_Coach")
     public String saveUserStats(@ModelAttribute("userStats") UserStats userStats) throws PRException {
         Coach coach = new Coach();

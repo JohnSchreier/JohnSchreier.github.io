@@ -28,6 +28,7 @@ public class ProfileController {
     @Autowired
     private PRedictionService predictionService;
 
+    //  Maps profile page with all of user's given PRedictions and UserStats
     @GetMapping("/Profile_Page")
     public String showProfilePage(Model model, User user) throws PRException {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -45,7 +46,8 @@ public class ProfileController {
         }
         return "Profile_Page";
     }
-//  Delete both PRedictions:
+
+    //  Deletes both PRedictions:
     @GetMapping("/delete")
     public RedirectView deleteUserPRedictions() {
         User user = userService.getLoggedUser();

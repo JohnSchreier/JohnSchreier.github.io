@@ -8,8 +8,10 @@ import java.util.Set;
 @Entity
 @Table
 public class Coach implements Serializable {
+    //    Coach class which is binds a coach's first name, last name, and auto generated id to an object
+//    Each User/UserStats gets one Coach, but a Coach can be connected to multiple UserStats/Users
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column
     private String coachFirstName;
@@ -18,6 +20,7 @@ public class Coach implements Serializable {
 
     @OneToMany(mappedBy = "coach")
     private Set<UserStats> stats = new HashSet<>();
+
     public Coach() {
     }
 

@@ -6,8 +6,9 @@ import java.io.Serializable;
 @Entity
 @Table
 public class UserStats implements Serializable {
+    //    This class binds a user's personalized goals and history to an object to be saved in the db
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column
     private String goals;
