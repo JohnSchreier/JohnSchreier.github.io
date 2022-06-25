@@ -4,7 +4,6 @@
 ### - Communicate running goals and history
 ### - Calculate goal paces for race times
 ### - Calculate predicted race times based on their current fitness
-### - [PRedictions example website](https://johnschreier.github.io/)
 
 ![PRLogo](src/main/resources/static/images/PRLogo.png)
 
