@@ -14,6 +14,8 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @AutoConfigureTestDatabase(replace=Replace.NONE)
 @Rollback(false)
 public class UserStatsRepositoryTest {
+//    Tests the UserStatsRepository method which can be used to find a user's goals, history, coach, and then chained to find that user's
+//    first and last names due to the OneToOne relationship
     @Autowired
     private UserStatsRepository userStatsRepository;
 

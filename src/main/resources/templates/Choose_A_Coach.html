@@ -2,100 +2,100 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Choose a coach</title>
     <!-- CSS link -->
-    <link rel="stylesheet" href="css/Choose_A_Coach.css" />
+    <link rel="stylesheet" href="css/Choose_A_Coach.css"/>
     <!-- javascript link -->
     <script src="javascript/Choose_A_Coach.js" defer></script>
     <!-- bootstrap -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
     />
     <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Koulen&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Koulen&display=swap"
+            rel="stylesheet"
     />
-  </head>
-  <body>
-      <!-- home page button top left -->
-      <div class="home-button">
-        <a
-          type="button"
-          href="/Home_Page"
-          class="btn btn-primary"
-          style="font-size: 20px"
-          >Home</a
-        >
-      </div>
-      <!-- user profile button top right -->
-      <div class="user-profile-button">
-        <a
-          type="button"
-          href="/Profile_Page"
-          class="btn btn-primary"
-          style="font-size: 20px"
-          >Profile</a
-        >
-      </div>
-     <!-- table for 5k pace chart -->
-   <div class="paceChart-container">
-     <table id="paceChart"></table>
-   </div>     
-    <!-- center form box -->
+</head>
+<body>
+<!-- home page button top left -->
+<div class="home-button">
+    <a
+            type="button"
+            href="/Home_Page"
+            class="btn btn-primary"
+            style="font-size: 20px"
+    >Home</a
+    >
+</div>
+<!-- user profile button top right -->
+<div class="user-profile-button">
+    <a
+            type="button"
+            href="/Profile_Page"
+            class="btn btn-primary"
+            style="font-size: 20px"
+    >Profile</a
+    >
+</div>
+<!-- table for 5k pace chart -->
+<div class="paceChart-container">
+    <table id="paceChart"></table>
+</div>
+<!-- center form box -->
 <!--      th:action=/Choose_Coach_Info" th:method="post" -->
-   <form class="contact-container" th:action="@{/Choose_A_Coach}" th:object="${userStats}" method="POST">
-     <div>Please choose your preferred coach:</div>
-     <div class="dropdown-select">
-      <select id="standard-select" th:field="*{coach}">Choose Your Coach
-       <!-- was dropbtn ^ -->
-<!--         <option>Choose Your Coach</option>-->
-          <br>
-         <option th:value="'1'" th:text="Breanna"></option>
-         <option th:value="'2'" th:text="Colin"></option>
-         <option th:value="'3'" th:text="Dakotah"></option>
-      </select> 
-     </div>
-       <br>
-     <label for="goal-textbox"
-       >Tell us about your fitness history!</label
-     ><br />
-     <input
-       type="text"
-       name="history"
-       th:field="*{history}"
-       id="history-textbox"
-       placeholder="I have... "
-       rows="5"
-       cols="50"
-     ></input>
-     <br>
-     <label for="goal-textbox"
-       >Tell us about your running goals!</label
-     ><br />
-     <input
-       type="text"
-       name="goals"
-       th:field="*{goals}"
-       id="goal-textbox"
-       placeholder="Goal #1... "
-       rows="5"
-       cols="50"
-     ></input>
-     <br>
-     <button type="submit" value="Submit" id="submitButton">Submit</button>
-   </form>
-   <div class="uphill-runner-container">
-     <img src="images/uphill_runner.jpg" class="uphill-runner-img">
-   </div>
-  </body>
+<form class="contact-container" th:action="@{/Choose_A_Coach}" th:object="${userStats}" method="POST">
+    <div>Please choose your preferred coach:</div>
+    <div class="dropdown-select">
+        <select id="standard-select" th:field="*{coach}">Choose Your Coach
+            <!-- was dropbtn ^ -->
+            <!--         <option>Choose Your Coach</option>-->
+            <br>
+            <option th:value="'1'" th:text="Breanna"></option>
+            <option th:value="'2'" th:text="Colin"></option>
+            <option th:value="'3'" th:text="Dakotah"></option>
+        </select>
+    </div>
+    <br>
+    <label for="goal-textbox"
+    >Tell us about your fitness history!</label
+    ><br/>
+    <input
+            type="text"
+            name="history"
+            th:field="*{history}"
+            id="history-textbox"
+            placeholder="I have... "
+            rows="5"
+            cols="50"
+    ></input>
+    <br>
+    <label for="goal-textbox"
+    >Tell us about your running goals!</label
+    ><br/>
+    <input
+            type="text"
+            name="goals"
+            th:field="*{goals}"
+            id="goal-textbox"
+            placeholder="Goal #1... "
+            rows="5"
+            cols="50"
+    ></input>
+    <br>
+    <button type="submit" value="Submit" id="submitButton">Submit</button>
+</form>
+<div class="uphill-runner-container">
+    <img src="images/uphill_runner.jpg" class="uphill-runner-img">
+</div>
+</body>
 </html>

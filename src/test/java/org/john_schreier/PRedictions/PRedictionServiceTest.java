@@ -9,13 +9,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
 @SpringBootTest
-@AutoConfigureTestDatabase(replace= AutoConfigureTestDatabase.Replace.NONE)
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Rollback(false)
 public class PRedictionServiceTest {
+//    Tests the findPredictionsByEmail method in the PredictionService class which is used to find a user's
+//    marathon and half-marathon predictions from the database.
 
     @Qualifier("PRedictionServiceImpl")
     @Autowired

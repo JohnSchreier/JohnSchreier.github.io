@@ -9,19 +9,20 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
 @SpringBootTest
-@AutoConfigureTestDatabase(replace= Replace.NONE)
+@AutoConfigureTestDatabase(replace = Replace.NONE)
 @Rollback(false)
 public class CoachServiceTest {
+    //    Tests the coach service method, findCoachByID, which uses the future implmentation "findById" method in the CoachRepository
     @Autowired
     private CoachService coachService;
-    @Autowired
-    private CoachRepository coachRepository;
+
     @Test
-    public void testFindCoachById(){
+    public void testFindCoachById() {
 
         Coach coach = coachService.findCoachById(2);
         System.out.println("coach = " + coach.getCoachLastName());

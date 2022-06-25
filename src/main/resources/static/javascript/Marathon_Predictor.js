@@ -54,125 +54,127 @@ let t1HoursInput = document.getElementById("t1hours"),
 
 //Marathon Prediction Calculator Update Form 1 (th:if "switch")
 let prediction_button_submit = document.getElementById("mar-form")
-if (prediction_button_submit!=null){
-prediction_button_submit.addEventListener("submit", function (event) {
-    event.preventDefault()
-    let t1hours = parseFloat(t1HoursInput.value),
-        t1minutes = parseFloat(t1MinutesInput.value),
-        t1seconds = parseFloat(t1SecondsInput.value),
+if (prediction_button_submit != null) {
+    prediction_button_submit.addEventListener("submit", function (event) {
+        event.preventDefault()
+        let t1hours = parseFloat(t1HoursInput.value),
+            t1minutes = parseFloat(t1MinutesInput.value),
+            t1seconds = parseFloat(t1SecondsInput.value),
 
-        d1 = parseFloat(d1Input.value);
+            d1 = parseFloat(d1Input.value);
 
-    if (isNaN(t1hours)) {
-        t1HoursInput.style.borderColor = "red";
-        return;
-    } else {
-        t1HoursInput.style.borderColor = "initial";
-    }
-    if (isNaN(t1minutes)) {
-        t1MinutesInput.style.borderColor = "red";
-        return;
-    } else {
-        t1MinutesInput.style.borderColor = "initial";
-    }
-    if (isNaN(t1seconds)) {
-        t1SecondsInput.style.borderColor = "red";
-        return;
-    } else {
-        t1SecondsInput.style.borderColor = "initial";
-    }
-    if (isNaN(d1)) {
-        d1Input.style.borderColor = "red";
-        return;
-    } else {
-        d1Input.style.borderColor = "initial";
-    }
-    let T1TotalSeconds = (t1hours * 60 + t1minutes) * 60 + t1seconds,
-        racePredictionSeconds = T1TotalSeconds * (26.2 / d1) ^ 1.06,
-        T2hours = Math.floor(racePredictionSeconds / 3600),
-        T2minutes = Math.floor(racePredictionSeconds / 60) % 60,
-        T2seconds = racePredictionSeconds % 60;
+        if (isNaN(t1hours)) {
+            t1HoursInput.style.borderColor = "red";
+            return;
+        } else {
+            t1HoursInput.style.borderColor = "initial";
+        }
+        if (isNaN(t1minutes)) {
+            t1MinutesInput.style.borderColor = "red";
+            return;
+        } else {
+            t1MinutesInput.style.borderColor = "initial";
+        }
+        if (isNaN(t1seconds)) {
+            t1SecondsInput.style.borderColor = "red";
+            return;
+        } else {
+            t1SecondsInput.style.borderColor = "initial";
+        }
+        if (isNaN(d1)) {
+            d1Input.style.borderColor = "red";
+            return;
+        } else {
+            d1Input.style.borderColor = "initial";
+        }
+        let T1TotalSeconds = (t1hours * 60 + t1minutes) * 60 + t1seconds,
+            racePredictionSeconds = T1TotalSeconds * (26.2 / d1) ^ 1.06,
+            T2hours = Math.floor(racePredictionSeconds / 3600),
+            T2minutes = Math.floor(racePredictionSeconds / 60) % 60,
+            T2seconds = racePredictionSeconds % 60;
 
-    if (T2minutes < 10) {
-        T2minutes = "0" + T2minutes;
-    }
-    if (T2seconds < 10) {
-        T2seconds = "0" + T2seconds;
-    }
+        if (T2minutes < 10) {
+            T2minutes = "0" + T2minutes;
+        }
+        if (T2seconds < 10) {
+            T2seconds = "0" + T2seconds;
+        }
 
-    let MarPrediction = "Your marathon prediction is:  " + T2hours + ":" + T2minutes + ":" + T2seconds;
-    predictor_pace.value = MarPrediction;
-    console.log(MarPrediction)
-    localStorage.setItem("marathonPrediction", MarPrediction);
-    //~~~~~~~~~~^^^^^^^^^^changed from halfMarathonPrediction^^^^
-    if (MarPrediction == null) {
-        console.log("FALSE");
-        alert();
-        return false;
+        let MarPrediction = "Your marathon prediction is:  " + T2hours + ":" + T2minutes + ":" + T2seconds;
+        predictor_pace.value = MarPrediction;
+        console.log(MarPrediction)
+        localStorage.setItem("marathonPrediction", MarPrediction);
+        //~~~~~~~~~~^^^^^^^^^^changed from halfMarathonPrediction^^^^
+        if (MarPrediction == null) {
+            console.log("FALSE");
+            alert();
+            return false;
 
-    }
-    window.location.href = `/Add_Marathon_Predictor/${MarPrediction}`
-    return true;
-});}
+        }
+        window.location.href = `/Add_Marathon_Predictor/${MarPrediction}`
+        return true;
+    });
+}
 //Marathon Predictor Create form 2
 let prediction_button_submit2 = document.getElementById("mar-form2")
-if(prediction_button_submit2 != null){
-prediction_button_submit2.addEventListener("submit", function () {
+if (prediction_button_submit2 != null) {
+    prediction_button_submit2.addEventListener("submit", function () {
 
-    let t1hours = parseFloat(t1HoursInput.value),
-        t1minutes = parseFloat(t1MinutesInput.value),
-        t1seconds = parseFloat(t1SecondsInput.value),
+        let t1hours = parseFloat(t1HoursInput.value),
+            t1minutes = parseFloat(t1MinutesInput.value),
+            t1seconds = parseFloat(t1SecondsInput.value),
 
-        d1 = parseFloat(d1Input.value);
+            d1 = parseFloat(d1Input.value);
 
-    if (isNaN(t1hours)) {
-        t1HoursInput.style.borderColor = "red";
-        return;
-    } else {
-        t1HoursInput.style.borderColor = "initial";
-    }
-    if (isNaN(t1minutes)) {
-        t1MinutesInput.style.borderColor = "red";
-        return;
-    } else {
-        t1MinutesInput.style.borderColor = "initial";
-    }
-    if (isNaN(t1seconds)) {
-        t1SecondsInput.style.borderColor = "red";
-        return;
-    } else {
-        t1SecondsInput.style.borderColor = "initial";
-    }
-    if (isNaN(d1)) {
-        d1Input.style.borderColor = "red";
-        return;
-    } else {
-        d1Input.style.borderColor = "initial";
-    }
-    let T1TotalSeconds = (t1hours * 60 + t1minutes) * 60 + t1seconds,
-        racePredictionSeconds = T1TotalSeconds * (26.2 / d1) ^ 1.06,
-        T2hours = Math.floor(racePredictionSeconds / 3600),
-        T2minutes = Math.floor(racePredictionSeconds / 60) % 60,
-        T2seconds = racePredictionSeconds % 60;
+        if (isNaN(t1hours)) {
+            t1HoursInput.style.borderColor = "red";
+            return;
+        } else {
+            t1HoursInput.style.borderColor = "initial";
+        }
+        if (isNaN(t1minutes)) {
+            t1MinutesInput.style.borderColor = "red";
+            return;
+        } else {
+            t1MinutesInput.style.borderColor = "initial";
+        }
+        if (isNaN(t1seconds)) {
+            t1SecondsInput.style.borderColor = "red";
+            return;
+        } else {
+            t1SecondsInput.style.borderColor = "initial";
+        }
+        if (isNaN(d1)) {
+            d1Input.style.borderColor = "red";
+            return;
+        } else {
+            d1Input.style.borderColor = "initial";
+        }
+        let T1TotalSeconds = (t1hours * 60 + t1minutes) * 60 + t1seconds,
+            racePredictionSeconds = T1TotalSeconds * (26.2 / d1) ^ 1.06,
+            T2hours = Math.floor(racePredictionSeconds / 3600),
+            T2minutes = Math.floor(racePredictionSeconds / 60) % 60,
+            T2seconds = racePredictionSeconds % 60;
 
-    if (T2minutes < 10) {
-        T2minutes = "0" + T2minutes;
-    }
-    if (T2seconds < 10) {
-        T2seconds = "0" + T2seconds;
-    }
+        if (T2minutes < 10) {
+            T2minutes = "0" + T2minutes;
+        }
+        if (T2seconds < 10) {
+            T2seconds = "0" + T2seconds;
+        }
 
-    let MarPrediction = "Your marathon prediction is:  " + T2hours + ":" + T2minutes + ":" + T2seconds;
-    predictor_pace.value = MarPrediction;
-    console.log(MarPrediction)
-    localStorage.setItem("marathonPrediction", MarPrediction);
+        let MarPrediction = "Your marathon prediction is:  " + T2hours + ":" + T2minutes + ":" + T2seconds;
+        predictor_pace.value = MarPrediction;
+        console.log(MarPrediction)
+        localStorage.setItem("marathonPrediction", MarPrediction);
 
-    if (MarPrediction == null) {
-        console.log("FALSE");
-        alert();
-        return false;
+        if (MarPrediction == null) {
+            console.log("FALSE");
+            alert();
+            return false;
 
-    }
+        }
 
-    return true;
-});}
+        return true;
+    });
+}

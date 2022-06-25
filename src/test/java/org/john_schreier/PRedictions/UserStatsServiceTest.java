@@ -1,12 +1,6 @@
 package org.john_schreier.PRedictions;
 import org.apache.logging.log4j.util.Strings;
-import org.john_schreier.PRedictions.model.Coach;
-import org.john_schreier.PRedictions.model.User;
-import org.john_schreier.PRedictions.model.UserStats;
-import org.john_schreier.PRedictions.repository.CoachRepository;
-import org.john_schreier.PRedictions.services.CoachService;
 import org.john_schreier.PRedictions.services.UserStatsService;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +14,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @AutoConfigureTestDatabase(replace= Replace.NONE)
 @Rollback(false)
 public class UserStatsServiceTest {
+//    Parameterized test for the findUserSTatsEmail which returns a user's UserStats (goals, history, coach) with their email address.
     @Autowired
     private UserStatsService userStatsService;
 

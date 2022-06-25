@@ -15,7 +15,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @AutoConfigureTestDatabase(replace=Replace.NONE)
 @Rollback(false)
 public class PRedictionsRepositoryTest {
-
+// This class tests the often-used methods/custom queries in the PRedictionsRepository class.
     @Autowired
     private PRedictionsRepository predictionsRepository;
     @Autowired

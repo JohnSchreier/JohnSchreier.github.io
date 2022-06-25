@@ -12,9 +12,12 @@ import org.springframework.test.annotation.Rollback;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @DataJpaTest
-@AutoConfigureTestDatabase(replace=Replace.NONE)
+@AutoConfigureTestDatabase(replace = Replace.NONE)
 @Rollback(false)
 public class CoachRepositoryTest {
+//    This class tests the findById method in the coach repo, which should return a coach based on their ID number
+//    Not being used in the current version of this app. Included for future implementation and scaling up, should admin
+//    functions be added.
     @Autowired
     private CoachRepository coachRepository;
 

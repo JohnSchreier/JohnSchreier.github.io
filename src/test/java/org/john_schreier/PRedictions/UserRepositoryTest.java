@@ -14,6 +14,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @AutoConfigureTestDatabase(replace=Replace.NONE)
 @Rollback(false)
 public class UserRepositoryTest {
+//    Tests method in the UserRepository which finds a user by their email address. "test@email.com" is used as it is already in the db.
     @Autowired
     private UserRepository userRepository;
 

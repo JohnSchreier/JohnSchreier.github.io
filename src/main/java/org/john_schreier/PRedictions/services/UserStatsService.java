@@ -10,8 +10,11 @@ import java.util.List;
 public interface UserStatsService {
 
     public List<UserStats> getAllUserStats();
+
     public UserStats saveUserStats(UserStats userStats) throws PRException;
+
     public UserStats findUserStatsByEmail(String email) throws PRException;
+
     public void deleteUserStatsByEmail(long id);
 
 }
