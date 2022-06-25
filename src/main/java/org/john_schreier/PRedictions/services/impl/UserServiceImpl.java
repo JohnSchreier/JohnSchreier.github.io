@@ -1,5 +1,6 @@
 package org.john_schreier.PRedictions.services.impl;
 
+import org.john_schreier.PRedictions.exceptions.PRException;
 import org.john_schreier.PRedictions.model.MyUserDetails;
 import org.john_schreier.PRedictions.model.User;
 import org.john_schreier.PRedictions.repository.UserRepository;
@@ -25,7 +26,10 @@ public class UserServiceImpl implements UserService {
 
     //method to get user by email
     @Override
-    public User getUserByEmail(String email) {
+    public User getUserByEmail(String email) throws PRException {
+        if (email == null) {
+            throw new PRException("Cannot get user by this email address");
+        }
         User user = userRepository.findUserByEmail(email);
         return user;
 
@@ -33,19 +37,25 @@ public class UserServiceImpl implements UserService {
 
     //    method to save to repo and encrypt user password:
     @Override
-    public User registerUser(User user) {
-//        set if exception
+    public User registerUser(User user) throws PRException {
+        if (user == null) {
+            throw new PRException("Cannot register user");
+        }
         user.setPassword(bcrypt.encode(user.getPassword()));
         return userRepository.save(user);
 
     }
 
     @Override
-    public User getLoggedUser() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String currentPrincipalName = authentication.getName();
-        User user = getUserByEmail(currentPrincipalName);
-        return user;
+    public User getLoggedUser() throws PRException {
+        try {
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            String currentPrincipalName = authentication.getName();
+            User user = getUserByEmail(currentPrincipalName);
+            return user;
+        } catch (PRException p){
+            throw new PRException("Cannot find logged in user");
+        }
     }
 
     //add method

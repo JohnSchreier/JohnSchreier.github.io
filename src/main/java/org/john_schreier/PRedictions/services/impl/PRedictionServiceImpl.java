@@ -12,7 +12,7 @@ import java.util.List;
 
 @Service
 public class PRedictionServiceImpl implements PRedictionService {
-//    Implementation of PRedictionService which defines the logic of each PRedictionService method.
+    //    Implementation of PRedictionService which defines the logic of each PRedictionService method.
 //    Bridge between the PRedictionService Repo and the calling of CRUD on the view/controllers.
     @Autowired
     private PRedictionsRepository predicRepo;
@@ -44,10 +44,16 @@ public class PRedictionServiceImpl implements PRedictionService {
     }
 
     public int savePredictionMarExists(String halfMarathonPrediction, String email) throws PRException {
+        if (email == null) {
+            throw new PRException("savePredictionMarExists error. email does not exist");
+        }
         return predicRepo.updateHalfMarPredictionByEmail(halfMarathonPrediction, email);
     }
 
     public int savePredictionHalfExists(String marathonPrediction, String email) throws PRException {
+        if (email == null) {
+            throw new PRException("savePredictionHalfExists error. email does not exist");
+        }
         return predicRepo.updateMarPredictionByEmail(marathonPrediction, email);
     }
 
@@ -58,11 +64,17 @@ public class PRedictionServiceImpl implements PRedictionService {
         return predicRepo.findPredictionsByUser(user);
     }
 
-    public boolean existsPRedictionsByUser(User user) {
+    public boolean existsPRedictionsByUser(User user) throws PRException {
+        if (user == null) {
+            throw new PRException("User may not exist");
+        }
         return predicRepo.existsPRedictionsByUser(user);
     }
 
-    public int deletePRedictionsByUser(User user) {
+    public int deletePRedictionsByUser(User user) throws PRException {
+        if (user == null) {
+            throw new PRException("No user found for deletion");
+        }
         return predicRepo.deletePRedictionsByUser(user);
     }
 }

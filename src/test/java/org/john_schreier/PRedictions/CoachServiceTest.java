@@ -1,5 +1,6 @@
 package org.john_schreier.PRedictions;
 
+import org.john_schreier.PRedictions.exceptions.PRException;
 import org.john_schreier.PRedictions.model.Coach;
 import org.john_schreier.PRedictions.repository.CoachRepository;
 import org.john_schreier.PRedictions.services.CoachService;
@@ -22,7 +23,7 @@ public class CoachServiceTest {
     private CoachService coachService;
 
     @Test
-    public void testFindCoachById() {
+    public void testFindCoachById() throws PRException {
 
         Coach coach = coachService.findCoachById(2);
         System.out.println("coach = " + coach.getCoachLastName());

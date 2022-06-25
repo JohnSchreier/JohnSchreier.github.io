@@ -9,12 +9,12 @@ import java.util.List;
 @Service
 public interface UserStatsService {
 
-    public List<UserStats> getAllUserStats();
+    public List<UserStats> getAllUserStats() throws PRException;
 
     public UserStats saveUserStats(UserStats userStats) throws PRException;
 
     public UserStats findUserStatsByEmail(String email) throws PRException;
 
-    public void deleteUserStatsByEmail(long id);
+    public void deleteUserStatsByEmail(long id) throws PRException;
 
 }

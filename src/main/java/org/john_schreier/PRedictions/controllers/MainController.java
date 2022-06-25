@@ -1,5 +1,6 @@
 package org.john_schreier.PRedictions.controllers;
 
+import org.john_schreier.PRedictions.exceptions.PRException;
 import org.john_schreier.PRedictions.model.User;
 import org.john_schreier.PRedictions.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,14 +41,14 @@ public class MainController {
 
     //  binds a new user's information to a User object
     @PostMapping("/register")
-    public String userRegistration(@ModelAttribute User user, Model model) {
+    public String userRegistration(@ModelAttribute User user, Model model) throws PRException {
         userService.registerUser(user);
         return "redirect:/";
     }
 
     //  maps Home_Page if a user logs in
     @GetMapping("/Home_Page")
-    public String showHomePage() {
+    public String showHomePage() throws PRException {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.getUserByEmail(auth.getName());
 

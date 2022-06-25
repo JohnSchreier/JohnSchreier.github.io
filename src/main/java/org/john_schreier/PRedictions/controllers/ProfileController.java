@@ -49,7 +49,7 @@ public class ProfileController {
 
     //  Deletes both PRedictions:
     @GetMapping("/delete")
-    public RedirectView deleteUserPRedictions() {
+    public RedirectView deleteUserPRedictions() throws PRException {
         User user = userService.getLoggedUser();
         predictionService.deletePRedictionsByUser(user);
         System.out.println("~~~~~~~~~~~~~~User Predictions Removed~~~~~~~~~~");

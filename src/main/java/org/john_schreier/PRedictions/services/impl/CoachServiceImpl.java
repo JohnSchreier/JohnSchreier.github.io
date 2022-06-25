@@ -1,5 +1,6 @@
 package org.john_schreier.PRedictions.services.impl;
 
+import org.john_schreier.PRedictions.exceptions.PRException;
 import org.john_schreier.PRedictions.model.Coach;
 import org.john_schreier.PRedictions.repository.CoachRepository;
 import org.john_schreier.PRedictions.services.CoachService;
@@ -19,7 +20,10 @@ public class CoachServiceImpl implements CoachService {
     }
 
     @Override
-    public Coach findCoachById(long id) {
+    public Coach findCoachById(long id) throws PRException {
+        if (id == 0) {
+            throw new PRException("findCoachByID method error. Coach does not exist");
+        }
         return coachRepository.findById(id);
     }
 }

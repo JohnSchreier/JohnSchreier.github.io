@@ -1,5 +1,6 @@
 package org.john_schreier.PRedictions;
 
+import org.john_schreier.PRedictions.exceptions.PRException;
 import org.john_schreier.PRedictions.model.User;
 import org.john_schreier.PRedictions.services.UserService;
 import org.junit.jupiter.api.Test;
@@ -20,7 +21,7 @@ public class UserServiceTest {
     UserService userService;
 
     @Test
-    public void testGetUserByEmail() {
+    public void testGetUserByEmail() throws PRException {
         User user = userService.getUserByEmail("m@email.com");
         System.out.println(user.getFirstName());
         assertThat(user).isNotNull();
