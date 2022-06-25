@@ -16,3 +16,5 @@
  - Un-comment "spring.sql.init.mode=always" in application properties
  - Let data.sql file populate Coach table in db
  - comment out "spring.sql.init.mode=always" to keep data.sql to keep from loading again.
+
+ - *ERD and wireframes folder in root directory*
