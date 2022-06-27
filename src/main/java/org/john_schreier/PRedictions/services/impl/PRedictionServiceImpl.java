@@ -1,5 +1,6 @@
 package org.john_schreier.PRedictions.services.impl;
 
+import org.john_schreier.PRedictions.constants.ExceptionConstants;
 import org.john_schreier.PRedictions.exceptions.PRException;
 import org.john_schreier.PRedictions.model.PRedictions;
 import org.john_schreier.PRedictions.model.User;
@@ -25,7 +26,7 @@ public class PRedictionServiceImpl implements PRedictionService {
     @Override
     public PRedictions findPredictionsByEmail(String email) throws PRException {
         if (email == null) {
-            throw new PRException("PR's not found with that email");
+            throw new PRException(ExceptionConstants.PR_S_NOT_FOUND_WITH_THAT_EMAIL);
         }
         return predicRepo.findPredictionsByEmail(email);
     }
@@ -38,42 +39,42 @@ public class PRedictionServiceImpl implements PRedictionService {
     @Override
     public PRedictions savePrediction(PRedictions predictions) throws PRException {
         if (predictions == null) {
-            throw new PRException("No PRedictions found");
+            throw new PRException(ExceptionConstants.NO_P_REDICTIONS_FOUND);
         }
         return predicRepo.save(predictions);
     }
 
     public int savePredictionMarExists(String halfMarathonPrediction, String email) throws PRException {
         if (email == null) {
-            throw new PRException("savePredictionMarExists error. email does not exist");
+            throw new PRException(ExceptionConstants.SAVE_PREDICTION_MAR_EXISTS_ERROR_EMAIL_DOES_NOT_EXIST);
         }
         return predicRepo.updateHalfMarPredictionByEmail(halfMarathonPrediction, email);
     }
 
     public int savePredictionHalfExists(String marathonPrediction, String email) throws PRException {
         if (email == null) {
-            throw new PRException("savePredictionHalfExists error. email does not exist");
+            throw new PRException(ExceptionConstants.SAVE_PREDICTION_HALF_EXISTS_ERROR_EMAIL_DOES_NOT_EXIST);
         }
         return predicRepo.updateMarPredictionByEmail(marathonPrediction, email);
     }
 
     public PRedictions getPredictionByUser(User user) throws PRException {
         if (user == null) {
-            throw new PRException("No user found");
+            throw new PRException(ExceptionConstants.NO_USER_FOUND);
         }
         return predicRepo.findPredictionsByUser(user);
     }
 
     public boolean existsPRedictionsByUser(User user) throws PRException {
         if (user == null) {
-            throw new PRException("User may not exist");
+            throw new PRException(ExceptionConstants.USER_MAY_NOT_EXIST);
         }
         return predicRepo.existsPRedictionsByUser(user);
     }
 
     public int deletePRedictionsByUser(User user) throws PRException {
         if (user == null) {
-            throw new PRException("No user found for deletion");
+            throw new PRException(ExceptionConstants.NO_USER_FOUND_FOR_DELETION);
         }
         return predicRepo.deletePRedictionsByUser(user);
     }

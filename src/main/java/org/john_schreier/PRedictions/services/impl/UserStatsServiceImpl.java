@@ -1,5 +1,6 @@
 package org.john_schreier.PRedictions.services.impl;
 
+import org.john_schreier.PRedictions.constants.ExceptionConstants;
 import org.john_schreier.PRedictions.exceptions.PRException;
 import org.john_schreier.PRedictions.model.UserStats;
 import org.john_schreier.PRedictions.repository.UserStatsRepository;
@@ -31,7 +32,7 @@ public class UserStatsServiceImpl implements UserStatsService {
     @Override
     public UserStats saveUserStats(UserStats userStats) throws PRException {
         if (userStats == null) {
-            throw new PRException("No UserStats Saved.");
+            throw new PRException(ExceptionConstants.NO_USER_STATS_SAVED);
         }
         return userStatsRepository.save(userStats);
     }
@@ -39,7 +40,7 @@ public class UserStatsServiceImpl implements UserStatsService {
     @Override
     public UserStats findUserStatsByEmail(String email) throws PRException {
         if (email == null) {
-            throw new PRException("No user stats found with that email");
+            throw new PRException(ExceptionConstants.NO_USER_STATS_FOUND_WITH_THAT_EMAIL);
         }
         return userStatsRepository.findByEmail(email);
     }
@@ -48,7 +49,7 @@ public class UserStatsServiceImpl implements UserStatsService {
     @Override
     public void deleteUserStatsByEmail(long id) throws PRException {
         if (id == 0) {
-            throw new PRException("No UserStats found to delete.");
+            throw new PRException(ExceptionConstants.NO_USER_STATS_FOUND_TO_DELETE);
         }
         userStatsRepository.deleteById(id);
     }
@@ -56,7 +57,7 @@ public class UserStatsServiceImpl implements UserStatsService {
     //    This method was added for future implementation, should a user want to update their UserStats.
     public void updateUserStats(UserStats userStats) throws PRException {
         if (userStats == null) {
-            throw new PRException("No UserStats found for update.");
+            throw new PRException(ExceptionConstants.NO_USER_STATS_FOUND_FOR_UPDATE);
         }
         userStatsRepository.save(userStats);
     }

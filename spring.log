@@ -2734,3 +2734,169 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/logi
 2022-06-27 11:02:51.282  INFO 18280 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-06-27 11:02:51.285  INFO 18280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-06-27 11:02:51.288  INFO 18280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 11:36:11.827  INFO 7396 --- [restartedMain] er_John_PRedictions_CaseStudyApplication : Starting Schreier_John_PRedictions_CaseStudyApplication using Java 18 on BASSMAKER9000 with PID 7396 (C:\Users\user\IdeaProjects\Schreier_John_PRedictions_CaseStudy\target\classes started by user in C:\Users\user\IdeaProjects\Schreier_John_PRedictions_CaseStudy)
+2022-06-27 11:36:11.829  INFO 7396 --- [restartedMain] er_John_PRedictions_CaseStudyApplication : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 11:36:11.893  INFO 7396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-27 11:36:11.894  INFO 7396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-27 11:36:12.384  INFO 7396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 11:36:12.444  INFO 7396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+2022-06-27 11:36:13.133  INFO 7396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 11:36:13.141  INFO 7396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 11:36:13.141  INFO 7396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 11:36:13.229  INFO 7396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 11:36:13.230  INFO 7396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1335 ms
+2022-06-27 11:36:13.384  INFO 7396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 11:36:13.435  INFO 7396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 11:36:13.494 DEBUG 7396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 11:36:13.503  INFO 7396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 11:36:13.539  INFO 7396 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 11:36:13.671  INFO 7396 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 11:36:13.777  INFO 7396 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 11:36:14.414  INFO 7396 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 11:36:14.421  INFO 7396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 11:36:14.514 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.547 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.602 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.654 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.734 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.736 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.748 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.757 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.759 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.772 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.821  WARN 7396 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 11:36:14.850 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.852 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.874 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.904 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.910 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.911 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.914 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:14.915 DEBUG 7396 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:15.035  INFO 7396 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6716b8e3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@411a4d09, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ef11b17, org.springframework.security.web.header.HeaderWriterFilter@33ea7579, org.springframework.security.web.csrf.CsrfFilter@3d15c957, org.springframework.security.web.authentication.logout.LogoutFilter@68d40925, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f0d557f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3bcfb28f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72f6a877, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5fa97a67, org.springframework.security.web.session.SessionManagementFilter@105e16a0, org.springframework.security.web.access.ExceptionTranslationFilter@192fafe, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37d06551]
+2022-06-27 11:36:15.186  INFO 7396 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-06-27 11:36:15.376  INFO 7396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-27 11:36:15.414  INFO 7396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 11:36:15.428  INFO 7396 --- [restartedMain] er_John_PRedictions_CaseStudyApplication : Started Schreier_John_PRedictions_CaseStudyApplication in 4.004 seconds (JVM running for 4.744)
+2022-06-27 11:36:25.349  INFO 7396 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 11:36:25.349  INFO 7396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 11:36:25.350  INFO 7396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-27 11:36:25.379 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.658 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.707 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.707 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.710 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.717 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.720 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.720 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.720 DEBUG 7396 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.720 DEBUG 7396 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.724 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.735 DEBUG 7396 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.739 DEBUG 7396 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.741 DEBUG 7396 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.750 DEBUG 7396 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:25.785 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.480 DEBUG 7396 --- [http-nio-8080-exec-8] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:31.481 DEBUG 7396 --- [http-nio-8080-exec-8] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:36:31.647 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.660 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.681 DEBUG 7396 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.684 DEBUG 7396 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.688 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.688 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.688 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.691 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.700 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.702 DEBUG 7396 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.705 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:31.710 DEBUG 7396 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:34.300 DEBUG 7396 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:34.331 DEBUG 7396 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:34.352 DEBUG 7396 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:34.352 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:34.355 DEBUG 7396 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:34.355 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:34.365 DEBUG 7396 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:34.371 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:34.375 DEBUG 7396 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:34.380 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:36.866 DEBUG 7396 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:36.895 DEBUG 7396 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:36.920 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:36.921 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:36.924 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:36.934 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:36.948 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:36.956 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.068 DEBUG 7396 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.076 DEBUG 7396 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.094 DEBUG 7396 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.094 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.098 DEBUG 7396 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.098 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.104 DEBUG 7396 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.104 DEBUG 7396 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.118 DEBUG 7396 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.120 DEBUG 7396 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.120 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:40.130 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:43.382 DEBUG 7396 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:43.410 DEBUG 7396 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:43.430 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:43.430 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:43.433 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:43.433 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:43.437 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:43.443 DEBUG 7396 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:43.444 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:36:43.451 DEBUG 7396 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:00.867 DEBUG 7396 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:00.877 DEBUG 7396 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(2039726837<open>)] for JPA transaction
+2022-06-27 11:37:00.877 DEBUG 7396 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.updateHalfMarPredictionByEmail]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-06-27 11:37:00.880 DEBUG 7396 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@49a7c37b]
+2022-06-27 11:37:00.899 DEBUG 7396 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:37:00.899 DEBUG 7396 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(2039726837<open>)]
+2022-06-27 11:37:00.901 DEBUG 7396 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:37:00.903 DEBUG 7396 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:00.908 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:00.921 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:00.939 DEBUG 7396 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:00.939 DEBUG 7396 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:00.943 DEBUG 7396 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:00.953 DEBUG 7396 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:00.964 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:00.971 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.873 DEBUG 7396 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.881 DEBUG 7396 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.902 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.902 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.905 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.906 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.909 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.910 DEBUG 7396 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.923 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.924 DEBUG 7396 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.927 DEBUG 7396 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:04.936 DEBUG 7396 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.177 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.178 DEBUG 7396 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.183 DEBUG 7396 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.187 DEBUG 7396 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.205 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.205 DEBUG 7396 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.207 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.207 DEBUG 7396 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.209 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.211 DEBUG 7396 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.217 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.217 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.217 DEBUG 7396 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.220 DEBUG 7396 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.225 DEBUG 7396 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.228 DEBUG 7396 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.229 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:37:08.237 DEBUG 7396 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:38:11.438  INFO 7396 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 11:38:11.442  INFO 7396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 11:38:11.445  INFO 7396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
