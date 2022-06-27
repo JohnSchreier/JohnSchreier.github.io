@@ -41,9 +41,17 @@ body {
     grid-column: 1;
     grid-row: 1;
     font-family: "Koulen", cursive;
-    margin: 4%;
+    margin: 15px;
 }
-
+.user-logout-button{
+    grid-column: 3;
+    font-family: "Koulen", cursive;
+    grid-row: 1;
+    justify-self: end;
+    margin-right: 15px;
+    margin-top: 15px;
+    z-index: 6;
+}
 .blue-track-lanes-container {
     grid-column: 2;
     justify-self: center;

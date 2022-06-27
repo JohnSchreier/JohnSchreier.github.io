@@ -25,17 +25,25 @@ body {
   grid-column: 1;
   grid-row: 1;
   font-family: "Koulen", cursive;
-  margin: 4%;
+  margin: 15px;
 }
 .user-profile-button{
   grid-column: 3;
   grid-row: 1;
   font-family: "Koulen", cursive;
   justify-self: end;
-  margin: 4%;
+  margin: 15px;
   z-index: 6;
 }
-
+.user-logout-button{
+  grid-column: 3;
+  font-family: "Koulen", cursive;
+  grid-row: 1;
+  justify-self: end;
+  margin-right: 115px;
+  margin-top: 15px;
+  z-index: 6;
+}
 #standard-select {
   background-color: var(--color-primary);
   color: white;

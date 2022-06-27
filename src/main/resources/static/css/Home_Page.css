@@ -26,7 +26,16 @@ body {
   font-family: "Koulen", cursive;
   grid-row: 1;
   justify-self: end;
-  margin: 4%;
+  margin: 15px;
+  z-index: 6;
+}
+.user-logout-button{
+  grid-column: 4;
+  font-family: "Koulen", cursive;
+  grid-row: 1;
+  justify-self: end;
+  margin-right: 115px;
+  margin-top: 15px;
   z-index: 6;
 }
 .sunset-container{

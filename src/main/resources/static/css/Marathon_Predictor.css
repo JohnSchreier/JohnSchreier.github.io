@@ -8,11 +8,11 @@ body {
     --color-error: #e20c0c;
     --color-success: #4bb544;
     --border-radius: 4px;
-  
+
     /* Orange reference: Hex: #FC4C02 RGB: (252, 76, 2) */
     /* Blue reference: Hex: #1778F2 RGB: (23, 120, 242) */
     /* White is just solid white */
-  
+
     font-family: "Koulen", cursive;
     /* font-size: 18px; */
     color: white;
@@ -21,54 +21,73 @@ body {
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-template-rows: inherit;
     grid-column-gap: 10px;
-  }
-  .home-button{
+}
+
+.home-button {
     grid-column: 1;
     grid-row: 1;
     font-family: "Koulen", cursive;
-    margin: 4%;
-  }
-  .marathon-title-container{
+    margin: 15px;
+}
+
+.marathon-title-container {
     grid-column: 2;
     grid-row: 1;
     text-align: center;
     margin-top: 3%;
-  }
-  .h1-header {
+}
+
+.h1-header {
     color: white;
     font-size: 3em;
     font-family: "Koulen", cursive;
-  }
-  .h2-header {
+}
+
+.h2-header {
     font-size: 37px;
     text-decoration: underline;
     font-family: "Koulen", cursive;
-  }
-  .h3-header {
+}
+
+.h3-header {
     font-size: 30px;
     font-family: "Koulen", cursive;
-  }
-  .user-profile-button{
+}
+
+.user-profile-button {
     grid-column: 3;
     font-family: "Koulen", cursive;
     grid-row: 1;
     justify-self: end;
-    margin: 4%;
+    margin: 15px;
     z-index: 6;
-  }
-  .kipchoge-finish-container{
+}
+
+.user-logout-button {
+    grid-column: 3;
+    font-family: "Koulen", cursive;
+    grid-row: 1;
+    justify-self: end;
+    margin-right: 115px;
+    margin-top: 15px;
+    z-index: 6;
+}
+
+.kipchoge-finish-container {
     grid-column: 1;
-    grid-row:2;
+    grid-row: 2;
     margin-left: 4%;
-  }
-  #kipchoge-finish-img {
+}
+
+#kipchoge-finish-img {
     width: 64vmax;
     border: 4px solid white;
     border-radius: 25px;
     position: relative;
     z-index: 1;
-  }
-  .calculator-marathon-pace {
+}
+
+.calculator-marathon-pace {
     position: relative;
     text-align: center;
     justify-content: center;
@@ -84,32 +103,37 @@ body {
     margin-top: 4%;
     margin-left: 12%;
     z-index: 2;
-  }
-  #calculator {
-    
+}
+
+#calculator {
+
     text-align: center;
     font-size: 25px;
     font-family: "Koulen", cursive;
     width: 430px;
     margin-top: 4%;
     margin-left: 12%;
-  }
-  #calculate_btn{
+}
+
+#calculate_btn {
     background-color: var(--color-primary);
     color: white;
     border: 2px solid white;
-  }
-  .time-instructions{
-    font-size: 21px;
-  }
-  input {
-    width: 90px;
-  }
+}
 
-  #pace {
+.time-instructions {
+    font-size: 21px;
+}
+
+input {
+    width: 90px;
+}
+
+#pace {
     font-size: 30px;
-  }
-  .predictor-marathon {
+}
+
+.predictor-marathon {
     position: relative;
     text-align: center;
     font-size: 1.5em;
@@ -124,27 +148,32 @@ body {
     margin-top: 4%;
     margin-left: 5%;
     z-index: 3;
-  }
-#prediction-calculator{
-  text-align: center;
-  font-size: 25px;
-  font-family: "Koulen", cursive;
-  width: 430px;
-  margin-top: 4%;
-  margin-left: 12%;
 }
+
+#prediction-calculator {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Koulen", cursive;
+    width: 430px;
+    margin-top: 4%;
+    margin-left: 12%;
+}
+
 #predictor-pace {
-  font-size: 30px;
+    font-size: 30px;
 }
+
 #d1 {
-  margin-top: 2%;
-  margin-bottom: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
-#predictor_calculate_btn{
-  background-color: var(--color-primary);
-  color: white;
-  border: 2px solid white;
+
+#predictor_calculate_btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: 2px solid white;
 }
-#predictor-pace{
-  display: none;
+
+#predictor-pace {
+    display: none;
 }
