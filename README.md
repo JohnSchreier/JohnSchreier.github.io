@@ -17,3 +17,15 @@
  - comment out "spring.sql.init.mode=always" to keep data.sql to keep from loading again.
 
  **ERD and wireframes folder in root directory**
+ 
+## Technologies Used:
+
+ - Java/JavaScript/CSS/HTML
+ - Intellij
+ - Spring Data JPA
+ - Hibernate
+ - MariaDB/HeidiSQL
+ - Spring Boot
+ - Spring Security
+ - Thymeleaf
+ - Bootstrap
